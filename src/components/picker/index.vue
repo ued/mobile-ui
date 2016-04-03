@@ -33,7 +33,7 @@ export default {
     }
 
     this.count = this.data.length
-    // set first item as value
+    // 如果没有值，设置第一个值为默认值
     if (this.value.length < this.count) {
       for (let i = 0; i < this.count; i++) {
         _this.value.$set(i, _this.data[i][0].value || _this.data[i][0])

@@ -122,5 +122,5 @@ export default {
 </script>
 
 <style>
-@import './datetimepicker.css'
+@import './datetimepicker.css';
 </style>
