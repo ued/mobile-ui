@@ -4,7 +4,7 @@ demo/
 node_modules/
 examples/
 test/
-/src/*.vue
+src/*.vue
 /src/*.js
 /src/*.html
 /src/assets/
