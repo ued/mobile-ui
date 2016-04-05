@@ -1,5 +1,6 @@
 var path = require('path')
 var cssLoaders = require('./css-loaders')
+var autoprefixer = require('autoprefixer')
 var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
@@ -68,6 +69,7 @@ module.exports = {
   vue: {
     loaders: cssLoaders()
   },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   eslint: {
     formatter: require('eslint-friendly-formatter')
   }
