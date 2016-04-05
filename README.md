@@ -1,6 +1,17 @@
 # mobile-ui
 
-> A Vue.js project
+> 移动端，vuejs组件库
+
+## 如何在项目中使用
+
+1. 更新`htdocs/packge.json`以及`static/wp/config`中的文件
+2. 运行`npm install`
+3. 可以在你的`vue`文件中用`import Datetime from 'mui_components/datetime'`来使用`mobile-ui`中的`datetime`组件
+
+## 如何开发组件
+
+1. fork这个git仓库
+2. 
 
 ## Build Setup
 
