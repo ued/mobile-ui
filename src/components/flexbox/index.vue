@@ -1,5 +1,5 @@
 <template>
-  <div class="vux-flexbox" :class="{'flex-col': orient == 'vertical', 'flex-row': orient == 'horizontal'}">
+  <div class="mui_flexbox" :class="{'flex-col': orient == 'vertical', 'flex-row': orient == 'horizontal'}">
     <slot></slot>
   </div>
 </template>
@@ -13,9 +13,9 @@ export default {
   },
   ready () {
     if (!this.supported) {
-      var list = this.$el.querySelectorAll('.vux-flexbox-item')
-      this.$el.classList.remove('vux-flexbox')
-      this.$el.classList.add('vux-flexbox-unsupport')
+      var list = this.$el.querySelectorAll('.mui_flexbox_item')
+      this.$el.classList.remove('mui_flexbox')
+      this.$el.classList.add('mui_flexbox--unsupport')
       var number = list.length
       var width = (100 / number) + '%'
       for (var i = 0; i < number; i++) {
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style>
-.vux-flexbox{
+.mui_flexbox{
   width: 100%;
   text-align: left;
   display: -webkit-box;
@@ -52,7 +52,7 @@ export default {
   -webkit-align-items: center;
 }
 
-.vux-flexbox .vux-flexbox-item{
+.mui_flexbox .mui_flexbox_item{
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
   -o-box-flex: 1;
@@ -61,31 +61,31 @@ export default {
   min-width: 20px;
 }
 
-.vux-flexbox-item > .vux-flexbox {
+.mui_flexbox_item > .mui_flexbox {
   width: 100%;
   height: 100%;
 }
 
-.vux-flexbox .vux-flexbox-item:first-child{
+.mui_flexbox .mui_flexbox_item:first-child{
   margin-left: 0!important;
 }
 
-.flex-col {
+.mui_flexbox.flex-col {
   box-orient: vertical;
   flex-direction: column;
 }
 
-.flex-col > .vux-flexbox-item {
+.flex-col > .mui_flexbox_item {
   width: 100%;
 }
 
-.flex-row {
+.mui_flexbox.flex-row {
   box-direction: row;
   box-orient: horizontal;
   flex-direction: row;
 }
 
-.flex-row > .vux-flexbox-item {
+.flex-row > .mui_flexbox_item {
   height: 100%;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-<div class="vux-picker">
+<div class="mui_picker">
   <flexbox :margin-left=0>
     <flexbox-item v-for="(index, one) in data" style="margin-left:0;">
-      <div class="vux-picker-{{index}}"></div>
+      <div class="picker-{{index}}"></div>
     </flexbox-item>
   </flexbox>
 </div>
@@ -44,11 +44,11 @@ export default {
     for (var i = 0; i < this.data.length; i++) {
       var uuid = Math.random().toString(36).substring(3, 8)
       this.uuids.push(uuid)
-      this.$el.querySelector(`.vux-picker-${i}`).setAttribute('id', `vux-picker-${uuid}`)
+      this.$el.querySelector(`.picker-${i}`).setAttribute('id', `picker-${uuid}`)
 
       ;
       (function (i) {
-        _this.scroller[i] = new Scroller(`#vux-picker-${uuid}`, {
+        _this.scroller[i] = new Scroller(`#picker-${uuid}`, {
           data: _this.data[i],
           defaultValue: _this.value[i] || _this.data[i][0].value,
           itemClass: _this.item_class,
@@ -94,9 +94,9 @@ export default {
       }
       const _this = this
       _this.scroller[i].destroy()
-      _this.$el.querySelector(`#vux-picker-${_this.uuids[i]}`).innerHTML = ''
+      _this.$el.querySelector(`#picker-${_this.uuids[i]}`).innerHTML = ''
       let list = _this.store.getChildren(_this.getValue()[i - 1])
-      _this.scroller[i] = new Scroller(`#vux-picker-${_this.uuids[i]}`, {
+      _this.scroller[i] = new Scroller(`#picker-${_this.uuids[i]}`, {
         data: list,
         itemClass: _this.item_class,
         onSelect: function (value) {

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import App from './App'
 
 import Datetime from './demos/Datetime'
+import Flexbox from './demos/Flexbox'
 import Picker from './demos/Picker'
 
 Vue.use(Router)
@@ -15,6 +16,9 @@ const router = new Router({
 router.map({
   '/components/datetime': {
     component: Datetime
+  },
+  '/components/flexbox': {
+    component: Flexbox
   },
   '/components/picker': {
     component: Picker

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="weui_cells_title" v-if="title" :style="{color:titleColor}">{{title}}</div>
-    <div class="weui_cells" :class="{'no_group_title':!title}">
+    <div class="mui_group_title" v-if="title" :style="{color:titleColor}">{{title}}</div>
+    <div class="mui_group" :class="{'no_group_title':!title}">
       <slot></slot>
     </div>
   </div>
@@ -20,13 +20,14 @@ export default {
   },
   events: {
     'group.class.add': function (value) {
-      this.$el.querySelector('.weui_cells').classList.add(value)
+      this.$el.querySelector('.mui_group').classList.add(value)
     }
   }
 }
 </script>
 
-<style>
+<style lang="less">
+@import "./style.less";
 .no_group_title {
   margin-top:15px;
 }

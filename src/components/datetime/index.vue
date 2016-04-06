@@ -1,10 +1,10 @@
 <template>
-<a class="weui_cell" href="javascript:">
-  <div class="weui_cell_bd weui_cell_primary">
+<a class="mui_group_item" href="javascript:">
+  <div class="mui_group_item_bd mui_group_item_primary">
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
   </div>
-  <div class="weui_cell_ft with_arrow vux-datetime-value">{{value}}</div>
+  <div class="mui_group_item_ft with_arrow dp-value">{{value}}</div>
 </a>
 </template>
 
@@ -79,17 +79,17 @@ export default {
     }
   },
   created () {
-    this.$dispatch('group.class.add', 'weui_cells_access')
+    this.$dispatch('group.class.add', 'mui_group_item_access') // 点击的样式
   },
   ready () {
     var _this = this
     const uuid = this.uuid
-    this.$el.setAttribute('id', 'vux-datetime-' + uuid)
+    this.$el.setAttribute('id', 'dp-id-' + uuid)
     let options = {
-      trigger: '#vux-datetime-' + uuid,
+      trigger: '#dp-id-' + uuid,
       format: _this.format,
       value: _this.value,
-      output: '.vux-datetime-value',
+      output: '.dp-value',
       confirmText: _this.confirmText,
       cancelText: _this.cancelText,
       titleText: _this.titleText,
@@ -122,5 +122,5 @@ export default {
 </script>
 
 <style>
-@import './datetimepicker.css';
+@import './datetimepicker.css'
 </style>
