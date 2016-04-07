@@ -1,5 +1,6 @@
 <style>
-@import '../assets/vendors/1px.css';
+@import "../assets/vendors/normalize.css";
+@import "../assets/vendors/1px.css";
 
 .weui_cell_box.weui_cell {
   padding:0;

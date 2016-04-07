@@ -177,11 +177,11 @@ function triggerEvents (list, args, context) {
     // call is faster than apply, optimize less than 3 argu
     // http://blog.csdn.net/zhengyinhui100/article/details/7837127
     switch (args.length) {
-      case 0: for (; i < l; i += 2) {pass = list[i].call(list[i + 1] || context) !== false && pass} break
-      case 1: for (; i < l; i += 2) {pass = list[i].call(list[i + 1] || context, a1) !== false && pass} break
-      case 2: for (; i < l; i += 2) {pass = list[i].call(list[i + 1] || context, a1, a2) !== false && pass} break
-      case 3: for (; i < l; i += 2) {pass = list[i].call(list[i + 1] || context, a1, a2, a3) !== false && pass} break
-      default: for (; i < l; i += 2) {pass = list[i].apply(list[i + 1] || context, args) !== false && pass} break
+      case 0: for (; i < l; i += 2) { pass = list[i].call(list[i + 1] || context) !== false && pass } break
+      case 1: for (; i < l; i += 2) { pass = list[i].call(list[i + 1] || context, a1) !== false && pass } break
+      case 2: for (; i < l; i += 2) { pass = list[i].call(list[i + 1] || context, a1, a2) !== false && pass } break
+      case 3: for (; i < l; i += 2) { pass = list[i].call(list[i + 1] || context, a1, a2, a3) !== false && pass } break
+      default: for (; i < l; i += 2) { pass = list[i].apply(list[i + 1] || context, args) !== false && pass } break
     }
   }
   // trigger will return false if one of the callbacks return false

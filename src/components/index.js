@@ -7,6 +7,7 @@ import Group from './group'
 import GroupItem from './group-item'
 import GroupTitle from './group-title'
 import Picker from './picker'
+import Popup from './popup'
 
 const mui = {
   Style,
@@ -16,7 +17,8 @@ const mui = {
   Group,
   GroupItem,
   GroupTitle,
-  Picker
+  Picker,
+  Popup
 }
 
 module.exports = mui

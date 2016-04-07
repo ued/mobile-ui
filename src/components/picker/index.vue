@@ -70,14 +70,14 @@ export default {
     data: {
       type: Array
     },
-    columns: {
-      type: Number,
-      default: 999
-    },
     value: {
       type: Array,
       required: false,
       twoWay: true
+    },
+    columns: {
+      type: Number,
+      default: 999
     },
     itemClass: {
       type: String,
