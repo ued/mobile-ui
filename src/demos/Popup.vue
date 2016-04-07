@@ -22,9 +22,9 @@
     <p @click="click2">点击关闭</p>
   </popup>
   <popup :show.sync="picker.show">
-    <flexbox>
-      <flexbox-item class="confirm">确认</flexbox-item>
-      <flexbox-item class="cancel" @click="triggerPickerShow">取消</flexbox-item>
+    <flexbox class="test_btns_wrap">
+      <flexbox-item class="btn_1" @click="triggerPickerShow">按钮1</flexbox-item>
+      <flexbox-item class="btn_2" @click="triggerPickerShow">按钮2</flexbox-item>
     </flexbox>
     <picker :data='picker.data' :columns=3 :value.sync='picker.value'></picker>
   </popup>
@@ -107,3 +107,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.test_btns_wrap {
+  background-color: #fff;
+  text-align: center;
+}
+.btn_1 {
+  color: blue;
+}
+</style>
