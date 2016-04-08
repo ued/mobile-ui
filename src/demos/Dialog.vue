@@ -73,7 +73,7 @@ export default {
       _dialog.content = '<p style="text-align:center;">这是2个以上按钮的例子</p>'
       _dialog.buttons = [{
         name: '关闭',
-        classes: '',
+        classes: ['your_class1', 'your_class2'],
         onClick () {
           _this.dialog.show = false
         }

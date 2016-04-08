@@ -6,7 +6,7 @@
         <div class="mui_dialog_bd">{{{ content }}}</div>
         <div class="mui_dialog_ft">
             <a v-for="button in buttons"
-              :class="['mui_btn_dialog', button.classes]"
+              :class="['mui_btn_dialog'].concat(button.classes)"
               @click="button.onClick"
               >{{ button.name }}</a>
         </div>
