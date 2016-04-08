@@ -10,16 +10,16 @@
 
 <script>
 import Picker from './datetimepicker'
-import Group from '../group/'
-import GroupItem from '../group-item' //引入group-item样式
-import InlineDesc from '../inline-desc/'
+import Group from '../group'
+import GroupItem from '../group-item'
+import InlineDesc from '../inline-desc'
 import Base from '../../libs/base'
 
 export default {
   mixins: [Base],
   components: {
     Group,
-    GroupItem,
+    GroupItem, //引入group-item样式
     InlineDesc
   },
   props: {
