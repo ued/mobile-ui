@@ -1,6 +1,7 @@
 import Style from './style'
 
 import Datetime from './datetime'
+import Dialog from './dialog'
 import Flexbox from './flexbox'
 import FlexboxItem from './flexbox-item'
 import Group from './group'
@@ -12,6 +13,7 @@ import Popup from './popup'
 const mui = {
   Style,
   Datetime,
+  Dialog,
   Flexbox,
   FlexboxItem,
   Group,
