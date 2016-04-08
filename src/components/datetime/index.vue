@@ -11,7 +11,6 @@
 <script>
 import Picker from './datetimepicker'
 import Group from '../group'
-import GroupItem from '../group-item'
 import InlineDesc from '../inline-desc'
 import Base from '../../libs/base'
 
@@ -19,7 +18,6 @@ export default {
   mixins: [Base],
   components: {
     Group,
-    GroupItem, //引入group-item样式
     InlineDesc
   },
   props: {
@@ -123,6 +121,7 @@ export default {
 }
 </script>
 
-<style>
-@import './datetimepicker.css';
+<style lang="less">
+@import "./datetimepicker.css";
+@import "../group-item/style.less"; // 引入group-iem样式
 </style>
