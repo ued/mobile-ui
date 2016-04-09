@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
 
+import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
@@ -16,6 +17,9 @@ const router = new Router({
 })
 
 router.map({
+  '/components/action-sheet': {
+    component: ActionSheet
+  },
   '/components/datetime': {
     component: Datetime
   },

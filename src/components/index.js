@@ -1,5 +1,6 @@
 import Style from './style'
 
+import ActionSheet from './action-sheet'
 import Datetime from './datetime'
 import Dialog from './dialog'
 import Flexbox from './flexbox'
@@ -12,6 +13,7 @@ import Popup from './popup'
 
 const mui = {
   Style,
+  ActionSheet,
   Datetime,
   Dialog,
   Flexbox,
