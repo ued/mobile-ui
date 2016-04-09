@@ -3,7 +3,10 @@
     <div class="mui_mask"></div>
     <div class="mui_dialog">
         <div class="mui_dialog_hd"><strong class="mui_dialog_title">{{ head }}</strong></div>
-        <div class="mui_dialog_bd">{{{ content }}}</div>
+        <div class="mui_dialog_bd">
+          {{{ content }}}
+          <slot></slot>
+        </div>
         <div class="mui_dialog_ft">
             <a v-for="button in buttons"
               :class="['mui_btn_dialog'].concat(button.classes)"
