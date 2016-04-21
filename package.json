@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "babel-runtime": "^5.8.0",
-    "lodash.filter": "^4.2.1"
+    "lodash.filter": "^4.2.1",
+    "validator": "^5.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
