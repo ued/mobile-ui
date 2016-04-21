@@ -8,6 +8,7 @@ import FlexboxItem from './flexbox-item'
 import Group from './group'
 import GroupItem from './group-item'
 import GroupTitle from './group-title'
+import MButton from './m-button'
 import MInput from './m-input'
 import Picker from './picker'
 import Popup from './popup'
@@ -22,6 +23,7 @@ const mui = {
   Group,
   GroupItem,
   GroupTitle,
+  MButton,
   MInput,
   Picker,
   Popup

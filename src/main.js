@@ -6,6 +6,7 @@ import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
+import MButton from './demos/MButton'
 import MInput from './demos/MInput'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
@@ -29,6 +30,9 @@ router.map({
   },
   '/components/flexbox': {
     component: Flexbox
+  },
+  '/components/m-button': {
+    component: MButton
   },
   '/components/m-input': {
     component: MInput
