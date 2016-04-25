@@ -10,6 +10,7 @@ import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
 import MButton from './demos/MButton'
 import MInput from './demos/MInput'
+import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
 
@@ -44,6 +45,9 @@ router.map({
   },
   '/components/m-input': {
     component: MInput
+  },
+  '/components/m-textarea': {
+    component: MTextarea
   },
   '/components/picker': {
     component: Picker

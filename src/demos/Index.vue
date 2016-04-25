@@ -19,6 +19,10 @@
     title="MInput"
     right-desc="Input样式"
     v-link="'/components/m-input'"></group-item>
+    <group-item
+    title="MTextarea"
+    right-desc="Textarea样式"
+    v-link="'/components/m-textarea'"></group-item>
   </group>
   <group title="弹窗类">
     <group-item
