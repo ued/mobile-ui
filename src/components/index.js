@@ -1,5 +1,6 @@
 import Style from './style'
 
+import Tpl from './_tpl'
 import ActionSheet from './action-sheet'
 import Datetime from './datetime'
 import Dialog from './dialog'
@@ -15,6 +16,7 @@ import Popup from './popup'
 
 const mui = {
   Style,
+  Tpl,
   ActionSheet,
   Datetime,
   Dialog,

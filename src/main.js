@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
 
+import Index from './demos/Index'
+import Tpl from './demos/_Tpl'
 import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
@@ -19,6 +21,12 @@ const router = new Router({
 })
 
 router.map({
+  '/': {
+    component: Index
+  },
+  '/components/_tpl': {
+    component: Tpl
+  },
   '/components/action-sheet': {
     component: ActionSheet
   },
