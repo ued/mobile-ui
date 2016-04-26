@@ -1,6 +1,11 @@
-<template id="">
+<template>
 
 </template>
 <script type="text/javascript">
-  var a = document.getElementById('id')
+  import { ActionSheet, Group, GroupItem } from '../components/'
+    var a = document.getElementById('id');
 </script>
+
+<style media="screen">
+
+</style>

@@ -17,7 +17,7 @@ const router = new Router({
 })
 
 router.map({
-  '/components/action-sheet': {
+  '/demo/action-sheet': {
     component: ActionSheet
   },
   '/components/datetime': {
@@ -26,13 +26,13 @@ router.map({
   '/components/dialog': {
     component: Dialog
   },
-  '/components/flexbox': {
+  '/demo/flexbox': {
     component: Flexbox
   },
-  '/components/picker': {
+  '/demo/picker': {
     component: Picker
   },
-  '/components/popup': {
+  '/demo/popup': {
     component: Popup
   }
 })
