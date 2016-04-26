@@ -2,10 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
 
+import Index from './demos/Index'
+import Tpl from './demos/_Tpl'
 import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
+import MButton from './demos/MButton'
+import MInput from './demos/MInput'
+import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
 
@@ -17,7 +22,14 @@ const router = new Router({
 })
 
 router.map({
-  '/demo/action-sheet': {
+
+  '/': {
+    component: Index
+  },
+  '/components/_tpl': {
+    component: Tpl
+  },
+  '/components/action-sheet': {
     component: ActionSheet
   },
   '/components/datetime': {
@@ -26,15 +38,19 @@ router.map({
   '/components/dialog': {
     component: Dialog
   },
-  '/demo/flexbox': {
-    component: Flexbox
+  '/components/m-button': {
+    component: MButton
   },
-  '/demo/picker': {
+  '/components/m-input': {
+    component: MInput
+  },
+  '/components/m-textarea': {
+    component: MTextarea
+  },
+  '/components/picker': {
     component: Picker
   },
-  '/demo/popup': {
-    component: Popup
-  }
+
 })
 
 router.start(App, '#app')

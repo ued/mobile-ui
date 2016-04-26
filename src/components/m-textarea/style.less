@@ -1,0 +1,27 @@
+//
+// Variables
+// -------------------
+@globalDescColor: #B2B2B2;
+@globalWarnColor: #E64340;
+
+//
+// Style
+// -------------------
+.mui_textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+}
+
+.mui_textarea_counter{
+    color: @globalDescColor;
+    text-align: right;
+    .mui_cell_warn &{
+        color: @globalWarnColor;
+    }
+}
