@@ -12,7 +12,7 @@
     <group-item
     title="为按钮添加Classes"
     right-desc="点击弹出"
-    @click="triggerActionSheet3"></group-item>
+    @click="triggerActionSheet3"></group-item>ffb700
   </group>
 
   <action-sheet
