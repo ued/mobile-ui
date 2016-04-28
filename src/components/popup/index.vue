@@ -1,5 +1,5 @@
 <template>
-  <div v-show="show" transition="popup" :style="{height:height}" class="vux-popup">
+  <div v-show="show" transition="popup" :style="{height:height}" class="mui-popup">
     <slot></slot>
   </div>
 </template>
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style>
-.vux-popup {
+.mui-popup {
   border-top: 2px solid #04BE02;
 }
 .popup-dialog {
