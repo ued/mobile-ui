@@ -4,7 +4,7 @@
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
   </div>
-  <div class="mui_group_item_ft" :class="{'withArrow': withArrow}">
+  <div class="mui_group_item_ft" :class="{'with_arrow': withArrow}">
     {{rightDesc}}
     <slot name="ft"><slot>
   </div>
