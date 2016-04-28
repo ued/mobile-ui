@@ -22,7 +22,10 @@ export default {
     title: String,
     inlineDesc: String,
     rightDesc: String,
-    withArrow: Boolean
+    withArrow: {
+      type: Boolean,
+      default: true
+    }
   },
   created () {
     this.$dispatch('group.class.add', 'mui_group_item_access') // 点击的样式
