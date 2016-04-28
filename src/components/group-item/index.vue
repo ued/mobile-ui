@@ -4,7 +4,10 @@
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
   </div>
-  <div class="mui_group_item_ft with_arrow">{{rightDesc}}</div>
+  <div class="mui_group_item_ft" :class="{'withArrow': withArrow}">
+    {{rightDesc}}
+    <slot name="ft"><slot>
+  </div>
 </a>
 </template>
 
@@ -18,7 +21,8 @@ export default {
   props: {
     title: String,
     inlineDesc: String,
-    rightDesc: String
+    rightDesc: String,
+    withArrow: Boolean
   },
   created () {
     this.$dispatch('group.class.add', 'mui_group_item_access') // 点击的样式
