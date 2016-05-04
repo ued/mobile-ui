@@ -3,6 +3,7 @@
   <div class="mui_group_item_bd mui_group_item_primary">
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+    <slot name="bd"></slot>
   </div>
   <div class="mui_group_item_ft" :class="{'with_arrow': withArrow}">
     {{rightDesc}}

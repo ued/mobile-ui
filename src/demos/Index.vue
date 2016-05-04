@@ -23,6 +23,14 @@
     title="MTextarea"
     right-desc="Textarea样式"
     v-link="'/components/m-textarea'"></group-item>
+    <group-item
+    title="Tag"
+    right-desc="活动标签样式"
+    v-link="'/components/tag'"></group-item>
+    <group-item
+    title="Layout"
+    right-desc="参见布局展示"
+    v-link="'/components/layout'"></group-item>
   </group>
   <group title="弹窗类">
     <group-item

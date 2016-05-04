@@ -8,11 +8,13 @@ import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
+import Layout from './demos/Layout'
 import MButton from './demos/MButton'
 import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
+import Tag from './demos/Tag'
 
 Vue.use(Router)
 
@@ -40,6 +42,9 @@ router.map({
   '/components/flexbox': {
     component: Flexbox
   },
+  '/components/layout': {
+    component: Layout
+  },
   '/components/m-button': {
     component: MButton
   },
@@ -54,6 +59,9 @@ router.map({
   },
   '/components/popup': {
     component: Popup
+  },
+  '/components/tag': {
+    component: Tag
   }
 })
 

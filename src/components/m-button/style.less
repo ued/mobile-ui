@@ -17,6 +17,9 @@
 @muiBtnDefaultDisabledFontColor:#C9C9C9;
 @muiBtnDefaultActiveFontColor:#A1A1A1;
 
+@muiBtnBrandBg:#0093D5;
+@muiBtnBrandActiveBg:#268CBC;
+
 @muiBtnPrimaryBg:#04BE02;
 @muiBtnPrimaryActiveBg:#039702;
 
@@ -86,6 +89,16 @@
   &:not(.mui_btn_disabled):active {
     color: @muiBtnDefaultActiveFontColor;
     background-color: @muiBtnDefaultActiveBg;
+  }
+}
+.mui_btn_brand {
+  background-color: @muiBtnBrandBg;
+  &:not(.mui_btn_disabled):visited {
+    color: @muiBtnFontColor;
+  }
+  &:not(.mui_btn_disabled):active {
+    color: @muiBtnActiveFontColor;
+    background-color: @muiBtnBrandActiveBg;
   }
 }
 .mui_btn_primary {

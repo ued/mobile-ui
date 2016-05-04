@@ -1,0 +1,25 @@
+.mui-tag-orange {
+  color: #fff;
+  background-color: #ff6600;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+// 右上角的标签
+.mui-tag-tr-orange {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: #ff6600;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+// 例子的样式前面加 ex
+.ex-out-wrap {
+  position: relative;
+  height: 200px;
+  width: 50%;
+  border: 1px solid #000;
+}
