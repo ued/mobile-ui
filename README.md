@@ -12,7 +12,7 @@
 ## 如何开发组件
 
 1. fork这个git仓库
-2.
+2. 在fork生成的仓库中开发之后，在pull request
 
 ## Build Setup
 
