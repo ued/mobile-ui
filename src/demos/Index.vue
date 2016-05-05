@@ -24,6 +24,10 @@
     right-desc="Textarea样式"
     v-link="'/components/m-textarea'"></group-item>
     <group-item
+    title="Radio"
+    right-desc="Radio样式"
+    v-link="'/components/radio'"></group-item>
+    <group-item
     title="Tag"
     right-desc="活动标签样式"
     v-link="'/components/tag'"></group-item>

@@ -1,0 +1,44 @@
+//
+// Variables
+// ---------------------
+@muiCellGapV: 10px;
+@muiCellHeight: 44px;
+@muiCellFontSize: 17px;
+
+@muiCellLineHeight: unit((@muiCellHeight - 2 * @muiCellGapV) / @muiCellFontSize);
+
+@tickColor: #09BB07;
+
+//
+// Radio Style
+// ---------------------
+.mui_check_label {
+    .setTapColor();
+}
+.mui_cell_radio{
+    .mui_group_item_ft {
+        // padding-left: @weuiCellInnerGapH;
+    }
+    &:active {
+        background-color: #ECECEC;
+    }
+}
+.mui_cell_radio {
+    .mui_radio {
+        position: absolute;
+        left: -9999em;
+        opacity: 0;
+        &:checked {
+            & + .weui_icon_checked {
+              content: '';
+              display: block;
+              box-sizing: border-box;
+              width: 10px;
+              height: 18px;
+              border-bottom: 2px solid @tickColor;
+              border-right: 2px solid @tickColor;
+              transform: rotate(45deg) translateX(-50%);
+            }
+        }
+    }
+}

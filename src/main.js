@@ -14,6 +14,7 @@ import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
+import Radio from './demos/Radio'
 import Tag from './demos/Tag'
 
 Vue.use(Router)
@@ -59,6 +60,9 @@ router.map({
   },
   '/components/popup': {
     component: Popup
+  },
+  '/components/radio': {
+    component: Radio
   },
   '/components/tag': {
     component: Tag

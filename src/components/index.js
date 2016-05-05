@@ -15,6 +15,7 @@ import MInput from './m-input'
 import MTextarea from './m-textarea'
 import Picker from './picker'
 import Popup from './popup'
+import Radio from './radio'
 import Tag from './tag'
 
 const mui = {
@@ -34,6 +35,7 @@ const mui = {
   MTextarea,
   Picker,
   Popup,
+  Radio,
   Tag
 }
 
