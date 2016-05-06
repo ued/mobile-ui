@@ -30,7 +30,7 @@ $bgColor:#ECECEC;
 // Action Sheet Style
 // PS: 动画部分的样式有做修改(v-animation)
 // ---------------------
-.mui_mask_transition{
+.mui-mask-transition{
     display: block;
     position: fixed;
     z-index: 1;
@@ -42,7 +42,7 @@ $bgColor:#ECECEC;
     transition:background .3s;
 }
 
-.mui_actionsheet {
+.mui-actionsheet {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -54,14 +54,14 @@ $bgColor:#ECECEC;
     //slide up animation
     transition: transform .3s;
 }
-.mui_actionsheet_menu{
+.mui-actionsheet-menu{
     background-color: #FFFFFF;
 }
-.mui_actionsheet_action {
+.mui-actionsheet-action {
     margin-top: 6px;
     background-color: #FFFFFF;
 }
-.mui_actionsheet_button {
+.mui-actionsheet-button {
     position: relative;
     padding: 10px 0;
     text-align: center;
@@ -80,19 +80,19 @@ $bgColor:#ECECEC;
 }
 
 //actionSheet aniamtion(v-animation)
-.mui_actionsheet-transition {
+.mui-actionsheet-transition {
   transition-duration: .3s;// 这个要设置为最长的
 }
-.mui_actionsheet-enter, .mui_actionsheet-leave {
-  .mui_mask_transition {
+.mui-actionsheet-enter, .mui-actionsheet-leave {
+  .mui-mask-transition {
     background: rgba(0,0,0,0);
   }
-  .mui_actionsheet {
+  .mui-actionsheet {
     transform: translate(0, 100%);
   }
 }
-.mui_actionsheet-leave {
-  .mui_mask_transition {
+.mui-actionsheet-leave {
+  .mui-mask-transition {
     display: none;
   }
 }

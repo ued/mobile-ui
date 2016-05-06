@@ -1,5 +1,5 @@
 <template>
-<div class="mui_picker">
+<div class="mui-picker">
   <flexbox :margin-left=0>
     <flexbox-item v-for="(index, one) in data" style="margin-left:0;">
       <div class="picker-{{index}}"></div>

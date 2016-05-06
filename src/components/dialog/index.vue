@@ -1,15 +1,15 @@
 <template>
-<div :class="[buttons.length < 3 ? 'mui_dialog_confirm' : 'mui_dialog_general']" v-show="show">
-    <div class="mui_mask"></div>
-    <div class="mui_dialog">
-        <div class="mui_dialog_hd"><strong class="mui_dialog_title">{{ head }}</strong></div>
-        <div class="mui_dialog_bd">
+<div :class="[buttons.length < 3 ? 'mui-dialog-confirm' : 'mui-dialog-general']" v-show="show">
+    <div class="mui-mask"></div>
+    <div class="mui-dialog">
+        <div class="mui-dialog-hd"><strong class="mui-dialog-title">{{ head }}</strong></div>
+        <div class="mui-dialog-bd">
           {{{ content }}}
           <slot></slot>
         </div>
-        <div class="mui_dialog_ft">
+        <div class="mui-dialog-ft">
             <a v-for="button in buttons"
-              :class="['mui_btn_dialog'].concat(button.classes)"
+              :class="['mui-btn-dialog'].concat(button.classes)"
               @click="button.onClick"
               >{{ button.name }}</a>
         </div>

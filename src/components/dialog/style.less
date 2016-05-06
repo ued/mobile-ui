@@ -44,7 +44,7 @@
 //
 // Dialog Style
 // ---------------------
-.mui_mask {
+.mui-mask {
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -54,7 +54,7 @@
     background: rgba(0, 0, 0, .6);
 }
 
-.mui_dialog {
+.mui-dialog {
     position: fixed;
     z-index: 13;
     width: 85%;
@@ -65,33 +65,33 @@
     background-color: @muiDialogBackgroundColor;
     text-align: center;
     border-radius: 3px;
-    .mui_dialog_confirm & {
-        .mui_dialog_hd {
+    .mui-dialog-confirm & {
+        .mui-dialog-hd {
             padding: 1.2em 20px .5em;
         }
-        .mui_dialog_bd {
+        .mui-dialog-bd {
             text-align: left;
         }
     }
 }
 
-.mui_dialog_hd {
+.mui-dialog-hd {
     padding: 1.2em 0 .5em;
 }
 
-.mui_dialog_title {
+.mui-dialog-title {
     font-weight: 400;
     font-size: 17px;
 }
 
-.mui_dialog_bd {
+.mui-dialog-bd {
     padding: 0 20px;
     font-size: 15px;
     color: @globalTextColor;
     text-align: left;
 }
 
-.mui_dialog_ft {
+.mui-dialog-ft {
     position: relative;
     line-height: 42px;
     margin-top: 20px;
@@ -111,7 +111,7 @@
         content: " ";
         .setTopLine(@muiDialogLineColor);
     }
-    .mui_dialog_confirm & {
+    .mui-dialog-confirm & {
         a {
             position: relative;
             &:after {
@@ -125,7 +125,7 @@
             }
         }
     }
-    .mui_dialog_general & {
+    .mui-dialog-general & {
         display: block;
         a {
             position: relative;
@@ -143,7 +143,7 @@
     }
 }
 
-.mui_btn_dialog {
+.mui-btn-dialog {
     &.default {
         color: #353535;
     }
@@ -153,7 +153,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .mui_dialog {
+    .mui-dialog {
         width: 35%;
     }
 }

@@ -1,11 +1,11 @@
 <template>
-<div class="mui_group_item">
-  <div class="mui_group_item_bd mui_group_item_primary">
+<div class="mui-group-item">
+  <div class="mui-group-item-bd mui-group-item-primary">
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     <slot name="bd"></slot>
   </div>
-  <div class="mui_group_item_ft" :class="{'with_arrow': withArrow}">
+  <div class="mui-group-item-ft" :class="{'with-arrow': withArrow}">
     {{rightDesc}}
     <slot name="ft"><slot>
   </div>
@@ -29,7 +29,7 @@ export default {
     }
   },
   created () {
-    this.$dispatch('group.class.add', 'mui_group_item_access') // 点击的样式
+    this.$dispatch('group.class.add', 'mui-group-item-access') // 点击的样式
   }
 }
 </script>

@@ -3,13 +3,13 @@
 //
 // Base styles
 // ----------------------
-.mui_group {
+.mui-group {
     margin-top: @muiGroupMarginTop;
     background-color: @muiCellBg;
     line-height: @muiCellLineHeight;
-    font-size: @muiCellFontSize; //group_item中间有效高度23px，跟客户端默认图标尺寸一致
+    font-size: @muiCellFontSize; //group-item中间有效高度23px，跟客户端默认图标尺寸一致
 
-    overflow: hidden; //因为每个group_item的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在group_item上用oh不生效
+    overflow: hidden; //因为每个group-item的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在group-item上用oh不生效
 
     // onepx
     position: relative;
@@ -24,7 +24,7 @@
     }
 }
 
-.mui_group_tips {
+.mui-group-tips {
     margin-top: .3em; // 8px - 行高
     color: @globalTextColor;
     padding-left: @muiCellGapH;

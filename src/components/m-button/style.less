@@ -36,7 +36,7 @@
 //
 // Base style
 // ---------------------
-.mui_btn {
+.mui-btn {
     position: relative;
     display: block;
     margin-left: auto;
@@ -65,14 +65,14 @@
         box-sizing: border-box;
         border-radius: @muiBtnBorderRadius*2;
     }
-    &+.mui_btn {
+    &+.mui-btn {
         margin-top: @muiBtnDefaultGap;
     }
 
-    &.mui_btn_inline {
+    &.mui-btn-inline {
         display: inline-block;
     }
-    &.mui_btn_mini {
+    &.mui-btn-mini {
         line-height: @muiBtnMiniHeight;
         font-size: @muiBtnMiniFontSize;
         padding: 0 .75em;
@@ -80,51 +80,51 @@
     }
 }
 
-.mui_btn_default {
+.mui-btn-default {
   background-color: @muiBtnDefaultBg;
   color: @muiBtnDefaultFontColor;
-  &:not(.mui_btn_disabled):visited {
+  &:not(.mui-btn-disabled):visited {
     color: @muiBtnDefaultFontColor;
   }
-  &:not(.mui_btn_disabled):active {
+  &:not(.mui-btn-disabled):active {
     color: @muiBtnDefaultActiveFontColor;
     background-color: @muiBtnDefaultActiveBg;
   }
 }
-.mui_btn_brand {
+.mui-btn-brand {
   background-color: @muiBtnBrandBg;
-  &:not(.mui_btn_disabled):visited {
+  &:not(.mui-btn-disabled):visited {
     color: @muiBtnFontColor;
   }
-  &:not(.mui_btn_disabled):active {
+  &:not(.mui-btn-disabled):active {
     color: @muiBtnActiveFontColor;
     background-color: @muiBtnBrandActiveBg;
   }
 }
-.mui_btn_primary {
+.mui-btn-primary {
   background-color: @muiBtnPrimaryBg;
-  &:not(.mui_btn_disabled):visited {
+  &:not(.mui-btn-disabled):visited {
     color: @muiBtnFontColor;
   }
-  &:not(.mui_btn_disabled):active {
+  &:not(.mui-btn-disabled):active {
     color: @muiBtnActiveFontColor;
     background-color: @muiBtnPrimaryActiveBg;
   }
 }
-.mui_btn_warn {
+.mui-btn-warn {
   background-color: @muiBtnWarnBg;
-  &:not(.mui_btn_disabled):visited {
+  &:not(.mui-btn-disabled):visited {
     color: @muiBtnFontColor;
   }
-  &:not(.mui_btn_disabled):active {
+  &:not(.mui-btn-disabled):active {
     color: @muiBtnActiveFontColor;
     background-color: @muiBtnWarnActiveBg;
   }
 }
 
-.mui_btn_disabled {
+.mui-btn-disabled {
   color: @muiBtnDisabledFontColor;
-  &.mui_btn_default {
+  &.mui-btn-default {
     color: @muiBtnDefaultDisabledFontColor;
   }
 }

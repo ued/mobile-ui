@@ -1,5 +1,5 @@
 @import "../group/_supports.less";
-.mui_group_item {
+.mui-group-item {
     // onepx
     position: relative;
     &:before {
@@ -12,7 +12,7 @@
         }
     }
 }
-.mui_group_item {
+.mui-group-item {
     padding: @muiCellGapV @muiCellGapH;
     position: relative; //这个是为了兼容group容器onepx方案被before挡住而做的
     display: flex;
@@ -22,36 +22,36 @@
     }
 }
 
-.mui_group_item_ft {
+.mui-group-item-ft {
     text-align: right;
     color: @globalTextColor;
-    &.with_arrow:after {
+    &.with-arrow:after {
       content: " ";
-      .setArrow_Wap(right, 6px, #C8C8CD, 2px);
+      .setArrow-Wap(right, 6px, #C8C8CD, 2px);
       top: -1px;
       margin-left:.3em;
     }
 }
 
-.mui_group_item_primary {
+.mui-group-item-primary {
     flex: 1;
 }
-.mui_group_item_access {
-    .mui_group_item:not(.no_access) {
-        // 在group_item_access和其它类型的group_item混着用的场景下，其它group_item要加no_access，避免有点击态
+.mui-group-item-access {
+    .mui-group-item:not(.no-access) {
+        // 在group-item-access和其它类型的group-item混着用的场景下，其它group-item要加no-access，避免有点击态
         .setTapColor();
         &:active {
             background-color: #ECECEC;
         }
     }
-    .mui_group_item {
+    .mui-group-item {
         color: inherit;
         text-decoration: none;
     }
-    .mui_group_item_ft .with_arrow {
+    .mui-group-item-ft .with-arrow {
         &:after {
             content: " ";
-            .setArrow_Wap(right, 6px, #C8C8CD, 2px);
+            .setArrow-Wap(right, 6px, #C8C8CD, 2px);
             top: -1px;
             margin-left:.3em;
         }

@@ -1,8 +1,8 @@
 <template>
-  <div class="mui_group_item">
-      <div class="mui_group_item_bd mui_group_item_primary">
-          <textarea class="mui_textarea" placeholder="{{placeholder}}" rows="3" v-model="value"></textarea>
-          <div class="mui_textarea_counter" v-show="showCounter && max"><span>{{count}}</span>/{{max}}</div>
+  <div class="mui-group-item">
+      <div class="mui-group-item-bd mui-group-item-primary">
+          <textarea class="mui-textarea" placeholder="{{placeholder}}" rows="3" v-model="value"></textarea>
+          <div class="mui-textarea-counter" v-show="showCounter && max"><span>{{count}}</span>/{{max}}</div>
       </div>
   </div>
 </template>

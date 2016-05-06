@@ -1,11 +1,11 @@
 <template>
-<label class="mui_group_item mui_cell_radio mui_check_label" for="radio_{{uuid}}_{{index}}" v-for="(index, option) in options">
-  <div class="mui_group_item_bd mui_group_item_primary">
+<label class="mui-group-item mui-cell-radio mui-check-label" for="radio-{{uuid}}-{{index}}" v-for="(index, option) in options">
+  <div class="mui-group-item-bd mui-group-item-primary">
       <p>{{ option.text }}</p>
   </div>
-  <div class="mui_group_item_ft">
-      <input type="radio" class="mui_radio" id="radio_{{uuid}}_{{index}}" :value="option.value" v-model="value">
-      <span class="weui_icon_checked"></span>
+  <div class="mui-group-item-ft">
+      <input type="radio" class="mui-radio" id="radio-{{uuid}}-{{index}}" :value="option.value" v-model="value">
+      <span class="weui-icon-checked"></span>
   </div>
 </label>
 </template>

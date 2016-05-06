@@ -77,16 +77,16 @@
 }
 
 .setArrowColor(@borderColor) {
-    &.arrow_t {
+    &.arrow-t {
         border-bottom-color: @borderColor;
     }
-    &.arrow_r {
+    &.arrow-r {
         border-left-color: @borderColor;
     }
-    &.arrow_b {
+    &.arrow-b {
         border-top-color: @borderColor;
     }
-    &.arrow_l {
+    &.arrow-l {
         border-right-color: @borderColor;
     }
 }
@@ -103,7 +103,7 @@
     border-style: dashed;
     border-color: transparent;
 
-    .arrow_t(@borderColor);
+    .arrow-t(@borderColor);
 }
 
 .setArrow(@direction, @borderWidth, @borderColor) when (@direction = right) {
@@ -113,7 +113,7 @@
     border-width: @borderWidth;
     border-style: dashed;
     border-color: transparent;
-    .arrow_r(@borderColor);
+    .arrow-r(@borderColor);
 }
 
 .setArrow(@direction, @borderWidth, @borderColor) when (@direction = bottom) {
@@ -123,7 +123,7 @@
     border-width: @borderWidth;
     border-style: dashed;
     border-color: transparent;
-    .arrow_b(@borderColor);
+    .arrow-b(@borderColor);
 }
 
 .setArrow(@direction, @borderWidth, @borderColor) when (@direction = left) {
@@ -133,68 +133,68 @@
     border-width: @borderWidth;
     border-style: dashed;
     border-color: transparent;
-    .arrow_l(@borderColor);
+    .arrow-l(@borderColor);
 }
 
-.arrow_t(@c) {
+.arrow-t(@c) {
     border-top-width: 0;
     border-bottom-color: @c;
     border-bottom-style: solid;
 }
 
-.arrow_r(@c) {
+.arrow-r(@c) {
     border-right-width: 0;
     border-left-color: @c;
     border-left-style: solid;
 }
 
-.arrow_b(@c) {
+.arrow-b(@c) {
     border-bottom-width: 0;
     border-top-color: @c;
     border-top-style: solid;
 }
 
-.arrow_l(@c) {
+.arrow-l(@c) {
     border-left-width: 0;
     border-right-color: @c;
     border-right-style: solid;
 }
 
 // css3 arrow
-.setArrowWidth_Wap(@borderWidth) {
+.setArrowWidth-Wap(@borderWidth) {
     border-width: @borderWidth @borderWidth 0 0;
 }
 
-.setArrowSize_Wap(@arrowsize) {
+.setArrowSize-Wap(@arrowsize) {
     height: @arrowsize;
     width: @arrowsize;
 }
 
-.setArrow_Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = top) {
+.setArrow-Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = top) {
     display: inline-block;
     .transform(translate(0, 0) rotate(-45deg));
-    .setArrowSize_Wap(@arrowsize);
-    .setArrowWidth_Wap(@borderWidth);
+    .setArrowSize-Wap(@arrowsize);
+    .setArrowWidth-Wap(@borderWidth);
     border-color: @borderColor;
     border-style: solid;
 }
 
-.setArrow_Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = right) {
+.setArrow-Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = right) {
     display: inline-block;
     transform: rotate(45deg);
-    .setArrowSize_Wap(@arrowsize);
-    .setArrowWidth_Wap(@borderWidth);
+    .setArrowSize-Wap(@arrowsize);
+    .setArrowWidth-Wap(@borderWidth);
     border-color: @borderColor;
     border-style: solid;
     position: relative;
     top: -2px;
 }
 
-.setArrow_Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = down) {
+.setArrow-Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = down) {
     display: inline-block;
     transform: rotate(135deg);
-    .setArrowSize_Wap(@arrowsize);
-    .setArrowWidth_Wap(@borderWidth);
+    .setArrowSize-Wap(@arrowsize);
+    .setArrowWidth-Wap(@borderWidth);
     border-color: @borderColor;
     border-style: solid;
 
@@ -202,11 +202,11 @@
     top: -3px;
 }
 
-.setArrow_Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = left) {
+.setArrow-Wap(@direction, @arrowsize, @borderColor,@borderWidth) when (@direction = left) {
     display: inline-block;
     transform: rotate(-135deg);
-    .setArrowSize_Wap(@arrowsize);
-    .setArrowWidth_Wap(@borderWidth);
+    .setArrowSize-Wap(@arrowsize);
+    .setArrowWidth-Wap(@borderWidth);
     border-color: @borderColor;
     border-style: solid;
 

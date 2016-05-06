@@ -1,14 +1,14 @@
 <template>
-	<div class="mui_group_item">
-    <div class="mui_group_item_hd">
-    	<label class="mui_label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
+	<div class="mui-group-item">
+    <div class="mui-group-item-hd">
+    	<label class="mui-label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
     	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
-    <div class="mui_group_item_bd mui_group_item_primary">
-      <input class="mui_input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
+    <div class="mui-group-item-bd mui-group-item-primary">
+      <input class="mui-input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
     </div>
-    <div class="mui_group_item_ft">
-      <i class="weui_icon weui_icon_clear" v-show="showClear && value" @click="clear"></i>
+    <div class="mui-group-item-ft">
+      <i class="weui-icon weui-icon-clear" v-show="showClear && value" @click="clear"></i>
     </div>
   </div>
 </template>
