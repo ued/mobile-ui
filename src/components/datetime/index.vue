@@ -123,5 +123,5 @@ export default {
 
 <style lang="less">
 @import "./datetimepicker.css";
-@import "../group-item/style.less"; // 引入group-iem样式
+@import (reference) "../group-item/style.less"; // 引入group-iem样式
 </style>

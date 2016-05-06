@@ -1,5 +1,5 @@
 <template>
-<a class="mui_group_item" href="javascript:">
+<div class="mui_group_item">
   <div class="mui_group_item_bd mui_group_item_primary">
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
@@ -9,7 +9,7 @@
     {{rightDesc}}
     <slot name="ft"><slot>
   </div>
-</a>
+</div>
 </template>
 
 <script>

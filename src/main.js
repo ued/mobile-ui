@@ -17,6 +17,9 @@ import Popup from './demos/Popup'
 import Radio from './demos/Radio'
 import Tag from './demos/Tag'
 
+const FastClick = require('fastclick')
+FastClick.attach(document.body)
+
 Vue.use(Router)
 
 const router = new Router({

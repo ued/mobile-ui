@@ -53,6 +53,6 @@ export default {
 </script>
 
 <style lang="less">
-@import "../group-item/style.less"; // 引入group-iem样式
+@import (reference) "../group-item/style.less"; // 引入group-iem样式
 @import "./style.less";
 </style>

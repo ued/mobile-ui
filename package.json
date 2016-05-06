@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "babel-runtime": "^5.8.0",
+    "fastclick": "^1.0.6",
     "lodash.filter": "^4.2.1",
     "validator": "^5.2.0"
   },

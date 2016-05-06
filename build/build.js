@@ -26,7 +26,12 @@ webpack(conf, function (err, stats) {
     chunks: false,
     chunkModules: false
   }) + '\n')
+
+  // Deploy to gh-pages
+  spinner = ora('deploying for gh-pages...')
+  spinner.start()
   ghpages.publish(path.join(__dirname, '../dist'), function (err) {
+    spinner.stop()
     if (err) throw err
 
     console.log('gh-pages deployed.')
