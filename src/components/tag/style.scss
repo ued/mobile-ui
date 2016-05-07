@@ -1,7 +1,48 @@
 ﻿@charset "utf-8";
 // 根元素 font-size
 $pixelBase: 20.7;
-@import "../../h5/css/common/function_v2.scss";
+// 根元素 font-size
+// 在import function_v2 之前声明
+//$pixelBase: 16;   // 5s 320/20
+//$pixelBase: 18.75;// 6s 375/20
+//$pixelBase: 20.7;   // 6+ 414/20
+
+html {
+  font-size: #{$pixelBase}px;
+}
+
+@function parseInt($n ) {
+//  /* 去掉单位 13px -> 13 */
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem($values ) {
+  $list: (); // 存储转变后的值
+
+  @each $value in $values {
+    // 遍历传入的值
+
+    @if $value == 0 or $value == auto {
+      // 0 和 auto 原样返回
+      $list: append($list, $value);
+    } @else {
+      $unit: unit($value); //取单位
+      $val: parseInt($value); // 取数字值
+
+      @if $unit == "px" {
+        //转换px值
+        $list: append($list, ($val / $pixelBase + rem));
+      }
+
+      @if $unit == "rem" {
+        // rem值不转换
+        $list: append($list, $value);
+      }
+    }
+  }
+
+  @return $list;// 返回值列表
+}
 
 .mui-tag-orange {
   color: #fff;
@@ -31,10 +72,7 @@ $pixelBase: 20.7;
 
 
 
-body{
-  font-size: rem(14px);
-  font-family: Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
-}
+
 //标签分类
 .sort{
   width: 100%;
@@ -88,11 +126,11 @@ body{
   background-clip: padding-box;
   float: left;
 }
-.mui-tag-item_color-white{
+.mui-tag-a-white{
   @extend %mui-tag-item_color-base;
 }
 //选中时物品标签颜色
-.mui-tag-item_color-orange{
+.mui-tag-a-orange{
   @extend %mui-tag-item_color-base;
   background-color: #f60;
   border: rem(1px) solid #f60;
@@ -102,7 +140,7 @@ body{
   overflow: hidden;
 }
 //商品评价标签
-.mui-tag-product_review-Light_green{
+.mui-tag-b-Light_green{
   display: inline-block;
   font-size: rem(12px);
   color: #333;
@@ -128,12 +166,12 @@ body{
   padding: rem(0) rem(10px);
 }
 //商品分类绿色背景
-.mui-tag-new_trial-green{
+.mui-tag-c-green{
   @extend %mui-tag-new_trial-white;
   background-color: #1bce8d;
 }
 //商品分类橘红色背景
-.mui-tag-new_trial-orange{
+.mui-tag-c-orange{
   @extend %mui-tag-new_trial-white;
   background-color: #ff6600;
 }
@@ -151,41 +189,40 @@ body{
   text-align: center;
 }
 //热门商品下商品分类绿色背景
-.mui-tag-popular_single_product-green{
+.mui-tag-d-green{
   @extend %mui-tag-popular_single_product-white;
   background-color: #1bce8d;
 }
 //热门商品下商品分类橘红色背景
-.mui-tag-popular_single_product-orange{
+.mui-tag-d-orange{
   @extend %mui-tag-popular_single_product-white;
   background-color: #ff6600;
 }
 //商品申请试用
 %mui-tag-product_try_out-orange{
   float: left;
-  width: rem(75px);
   text-align: center;
   color: #fff;
   background-color: #f60;
 }
 //商品申请试用结束
-.mui-tag-product_try_out_off-gray{
+.mui-tag-e-gray{
   @extend %mui-tag-product_try_out-orange;
   background-color: #999;
 }
 //限时活动
-.mui-tag-limited_time_activities{
+.mui-tag-f{
   position: relative;
   float: left;
   color: #fff;
-  .mui-tag-limited_time_activities-orange{
+  .mui-tag-f-orange{
     float: right;
     height: rem(30px);
     line-height: rem(30px);
     padding: rem(0) rem(11px);
     background-color: #ff6600;
   }
-  .mui-tag-limited_time_activities_timer-gray{
+  .mui-tag-f-gray{
     float: right;
     height: rem(30px);
     line-height: rem(30px);
