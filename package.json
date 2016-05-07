@@ -5,7 +5,7 @@
   "author": "Tony Luo",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js && npm build-components",
+    "build": "node build/build.js && npm run build-components",
     "build-components": "rimraf components && node build/build-components.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
