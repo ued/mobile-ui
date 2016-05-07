@@ -2,6 +2,7 @@
 <label class="mui-group-item mui-cell-radio mui-check-label" for="radio-{{uuid}}-{{index}}" v-for="(index, option) in options">
   <div class="mui-group-item-bd mui-group-item-primary">
       <p>{{ option.text }}</p>
+      <inline-desc v-if="option.inlineDesc">{{ option.inlineDesc }}</inline-desc>
   </div>
   <div class="mui-group-item-ft">
       <input type="radio" class="mui-radio" id="radio-{{uuid}}-{{index}}" :value="option.value" v-model="value">
@@ -30,9 +31,6 @@ export default {
       type: String,
       default: '',
       twoWay: true
-    },
-    inlineDesc: {
-      type: String
     }
   },
   methods: {
