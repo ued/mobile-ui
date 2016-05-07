@@ -33,7 +33,7 @@
           <span>商品评价：</span>
       </div>
       <div>
-          <span class="mui-tag-b-Light_green">质量好(72)</span>
+          <span class="mui-tag-b-green">质量好(72)</span>
       </div>
   </div>
   <!--首页商品分类-->
