@@ -124,11 +124,11 @@ $pixelBase: 20.7;
   float: left;
 }
 .mui-tag-a-white {
-  @extend %mui-tag-item_color-base;
+  @extend %mui-tag-a-base;
 }
 //选中时物品标签颜色
 .mui-tag-a-orange {
-  @extend %mui-tag-item_color-base;
+  @extend %mui-tag-a-base;
   background-color: #f60;
   border: rem(1px) solid #f60;
   color: #fff;
