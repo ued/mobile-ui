@@ -1,3 +1,8 @@
+﻿@charset "utf-8";
+// 根元素 font-size
+$pixelBase: 20.7;
+@import "../../h5/css/common/function_v2.scss";
+
 .mui-tag-orange {
   color: #fff;
   background-color: #ff6600;
@@ -22,4 +27,170 @@
   height: 200px;
   width: 50%;
   border: 1px solid #000;
+}
+
+
+
+body{
+  font-size: rem(14px);
+  font-family: Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+}
+//标签分类
+.sort{
+  width: 100%;
+  margin-left: rem(20px);
+  margin-bottom: rem(10px);
+  float: left;
+}
+.sort_name{
+  padding-bottom: rem(5px);
+}
+//优惠卷标签
+//优惠券两侧锯齿
+.mui-tag-coupon_side-orange{
+  height: rem(22px);
+  width: rem(3px);
+  padding: rem(0);
+  margin: rem(0);
+  left: rem(1px);
+  display: inline-block;
+  background-size: rem(130px) rem(240px);
+}
+//优惠券标签
+.mui-tag-coupon-orange {
+  color: #fff;
+  background-color: #ff784c;
+  font-size: rem(11px);
+  height: rem(22px);
+  line-height: rem(22px);
+  padding: rem(0) rem(8px);
+  float: left;
+}
+//物品颜色标签
+//未选中时物品标签颜色
+%mui-tag-item_color-base{
+  box-sizing: border-box;
+  height: rem(30px);
+  border: rem(1px) solid #ddd;
+  border-radius: rem(3px);
+  -webkit-border-radius: rem(3px);
+  line-height: rem(30px);
+  text-align: center;
+  font-size: rem(12px);
+  min-width: rem(1px);
+  overflow: hidden;
+  padding: rem(0) rem(15px);
+  background: #fff;
+  margin: rem(0) rem(10px) rem(10px) rem(0);
+  word-break: break-all;
+  color: #333;
+  cursor: pointer;
+  background-clip: padding-box;
+  float: left;
+}
+.mui-tag-item_color-white{
+  @extend %mui-tag-item_color-base;
+}
+//选中时物品标签颜色
+.mui-tag-item_color-orange{
+  @extend %mui-tag-item_color-base;
+  background-color: #f60;
+  border: rem(1px) solid #f60;
+  color: #fff;
+  border-radius: rem(3px);
+  -webkit-border-radius: rem(3px);
+  overflow: hidden;
+}
+//商品评价标签
+.mui-tag-product_review-Light_green{
+  display: inline-block;
+  font-size: rem(12px);
+  color: #333;
+  border-radius: rem(4px);
+  -webkit-border-radius: rem(4px);
+  background: #ebfcf1;
+  border: rem(1px) solid #23d75f;
+  height: rem(24px);
+  line-height: rem(24px);
+  vertical-align: middle;
+  padding: rem(0) rem(8px);
+  margin: rem(0px) rem(10px) rem(0) rem(10);
+}
+//商品分类
+//商品分类基础样式
+%mui-tag-new_trial-white{
+  width: rem(70px);
+  text-align: center;
+  color: #fff;
+  font-size: rem(12px);
+  height: rem(25px);
+  line-height: rem(25px);
+  padding: rem(0) rem(10px);
+}
+//商品分类绿色背景
+.mui-tag-new_trial-green{
+  @extend %mui-tag-new_trial-white;
+  background-color: #1bce8d;
+}
+//商品分类橘红色背景
+.mui-tag-new_trial-orange{
+  @extend %mui-tag-new_trial-white;
+  background-color: #ff6600;
+}
+
+//热门单品下商品分类基础样式
+%mui-tag-popular_single_product-white{
+  float: left;
+  margin-top: rem(2px);
+  margin-right: rem(5px);
+  color: #fff;
+  font-size: rem(11px);
+  height: rem(15px);
+  line-height: rem(15px);
+  padding: rem(0) rem(3px);
+  text-align: center;
+}
+//热门商品下商品分类绿色背景
+.mui-tag-popular_single_product-green{
+  @extend %mui-tag-popular_single_product-white;
+  background-color: #1bce8d;
+}
+//热门商品下商品分类橘红色背景
+.mui-tag-popular_single_product-orange{
+  @extend %mui-tag-popular_single_product-white;
+  background-color: #ff6600;
+}
+//商品申请试用
+%mui-tag-product_try_out-orange{
+  float: left;
+  width: rem(75px);
+  text-align: center;
+  color: #fff;
+  background-color: #f60;
+}
+//商品申请试用结束
+.mui-tag-product_try_out_off-gray{
+  @extend %mui-tag-product_try_out-orange;
+  background-color: #999;
+}
+//限时活动
+.mui-tag-limited_time_activities{
+  position: relative;
+  float: left;
+  color: #fff;
+  .mui-tag-limited_time_activities-orange{
+    float: right;
+    height: rem(30px);
+    line-height: rem(30px);
+    padding: rem(0) rem(11px);
+    background-color: #ff6600;
+  }
+  .mui-tag-limited_time_activities_timer-gray{
+    float: right;
+    height: rem(30px);
+    line-height: rem(30px);
+    padding-right: rem(12px);
+    background-color: #303030;
+    opacity: 0.8;
+  }
 }
