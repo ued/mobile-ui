@@ -14,6 +14,8 @@ import MInput from './m-input'
 import MTextarea from './m-textarea'
 import Picker from './picker'
 import Popup from './popup'
+import Icontable from './icontable'
+import IcontableItem from './icontable-item'
 
 const mui = {
   Style,
@@ -30,7 +32,9 @@ const mui = {
   MInput,
   MTextarea,
   Picker,
-  Popup
+  Popup,
+  Icontable,
+  IcontableItem
 }
 
 module.exports = mui

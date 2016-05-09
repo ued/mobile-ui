@@ -13,7 +13,7 @@ import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
-
+import Icontable from './demos/Icontable'
 Vue.use(Router)
 
 const router = new Router({
@@ -54,6 +54,9 @@ router.map({
   },
   '/components/popup': {
     component: Popup
+  },
+  '/components/icontable': {
+    component: Icontable
   }
 })
 

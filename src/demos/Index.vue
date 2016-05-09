@@ -23,6 +23,10 @@
     title="MTextarea"
     right-desc="Textarea样式"
     v-link="'/components/m-textarea'"></group-item>
+     <group-item
+    title="Icontable"
+    right-desc="Icontable样式"
+    v-link="'/components/icontable'"></group-item>
   </group>
   <group title="弹窗类">
     <group-item
