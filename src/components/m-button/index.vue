@@ -18,7 +18,7 @@
 		'mui-btn-c-orange':type==='c-orange',
 		'mui-btn-d-white':type==='d-white',
 		'mui-btn-e-white':type==='e-white',
-		'mui-btn-g-orange':type==='g-orange',
+		'mui-btn-f-orange':type==='f-orange',
 		'mui-btn-default':type==='default'}">
 		{{text}}
 		<slot></slot>
