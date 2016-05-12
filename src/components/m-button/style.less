@@ -41,8 +41,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 14px;
-    padding-right: 14px;
     box-sizing: border-box;
     font-size: @muiBtnFontSize;
     text-align: center;
@@ -73,9 +71,8 @@
         display: inline-block;
     }
     &.mui-btn-mini {
-        line-height: @muiBtnMiniHeight;
-        font-size: @muiBtnMiniFontSize;
-        padding: 0 .75em;
+        line-height: 29px;
+        font-size: 12px;
         display: inline-block;
     }
 }
@@ -127,4 +124,123 @@
   &.mui-btn-default {
     color: @muiBtnDefaultDisabledFontColor;
   }
+}
+//搜索样式
+.mui-btn-a(@bgcolor:#0092d8,@color:#fff) {
+    border-radius: 2px;
+    background-color: @bgcolor;
+    text-align: center;
+    color: @color;
+    border: 1px solid @bgcolor;
+    width: 38px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    line-height: 29px;
+    font-size: 12px;
+    display: inline-block; 
+}
+.mui-btn-a-blue {
+    .mui-btn-a();
+}
+.mui-btn-a-white {
+    .mui-btn-a(@bgcolor:#F7F7F7,@color:#454545);
+}
+.mui-btn-a-red {
+    .mui-btn-a(@bgcolor:#EF4F4F);
+}
+.mui-btn-a-green {
+    .mui-btn-a(@bgcolor:#04BE02);
+}
+//分类样式
+.mui-btn-b-white {
+    display: block;
+    padding: 0 14px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    color: #333;
+}
+//返回商城、签到
+.mui-btn-c(@width:73px,@color:#0093d5) {
+    display: inline-block;
+    height: 28px;  
+    text-align: center;
+    line-height: 28px;
+    margin: 15px 10px 15px 0;
+    font-size: 12px;  
+    border-radius: 3px;  
+    width: @width;
+    border: 1px solid @color;
+    color: @color;
+}
+.mui-btn-c-white {
+    .mui-btn-c(@color:#F7F7F7);
+    color:#454545;
+}
+.mui-btn-c-blue {
+    .mui-btn-c();
+}
+.mui-btn-c-green {
+    .mui-btn-c(@width:60px,@color:#17c000);
+}
+.mui-btn-c-orange {
+    .mui-btn-c(@color:#f60);
+}
+//查看图文详情
+.mui-btn-d-white {
+    display: inline-block;
+    font-size: 13px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #ccc;
+}
+//获取验证码
+.mui-btn-e-white {
+    display: block;
+    min-width: 100px;
+    padding-left: 15px;
+    text-align: center;
+    color: #0092d8;
+}
+
+//立即购买
+.mui-btn-g-orange {
+    margin-left: 50px;
+    background-color: #f60;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0px;
+}
+.g-orange-wrap {
+    -webkit-box-sizing: border-box;
+    background-color: #fff;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-right: 1px solid #f4f4f4;
+}
+.icon_collect {
+    background-position: 0px 0;
+    display: block;
+    width: 30px;
+    height: 37px;
+    background: url("http://img.mdcdn.cn/h5/img/detail/detail_sprite_v2.png?t=0122") 0 0 no-repeat;
+    background-size: 130px 240px;
 }
