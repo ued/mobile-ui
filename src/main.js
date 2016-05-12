@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import FastClick from 'fastclick'
 import App from './App'
 
 import Index from './demos/Index'
@@ -17,7 +18,6 @@ import Popup from './demos/Popup'
 import Radio from './demos/Radio'
 import Tag from './demos/Tag'
 
-const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
 Vue.use(Router)
