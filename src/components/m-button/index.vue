@@ -7,6 +7,18 @@
 		'mui-btn-brand':type==='brand',
 		'mui-btn-primary':type==='primary',
 		'mui-btn-warn':type==='warn',
+		'mui-btn-a-blue':type==='a-blue',
+		'mui-btn-a-red':type==='a-red',
+		'mui-btn-a-white':type==='a-white',
+		'mui-btn-a-green':type==='a-green',
+		'mui-btn-b-white':type==='b-white',
+		'mui-btn-c-white':type==='c-white',
+		'mui-btn-c-blue':type==='c-blue',
+		'mui-btn-c-green':type==='c-green',
+		'mui-btn-c-orange':type==='c-orange',
+		'mui-btn-d-white':type==='d-white',
+		'mui-btn-e-white':type==='e-white',
+		'mui-btn-f-orange':type==='f-orange',
 		'mui-btn-default':type==='default'}">
 		{{text}}
 		<slot></slot>
