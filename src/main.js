@@ -14,6 +14,7 @@ import MButton from './demos/MButton'
 import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
+import Popside from './demos/Popside'
 import Popup from './demos/Popup'
 import Radio from './demos/Radio'
 import Tag from './demos/Tag'
@@ -60,6 +61,9 @@ router.map({
   },
   '/components/picker': {
     component: Picker
+  },
+  '/components/popside': {
+    component: Popside
   },
   '/components/popup': {
     component: Popup

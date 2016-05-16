@@ -49,15 +49,12 @@ export default {
 </script>
 
 <style>
-.mui-popup {
-  border-top: 2px solid #04BE02;
-}
 .popup-dialog {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #eee;
+  background: #fbf9fe;
   z-index: 101;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;

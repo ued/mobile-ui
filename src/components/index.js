@@ -14,6 +14,7 @@ import MButton from './m-button'
 import MInput from './m-input'
 import MTextarea from './m-textarea'
 import Picker from './picker'
+import Popside from './popside'
 import Popup from './popup'
 import Radio from './radio'
 import Tag from './tag'
@@ -34,6 +35,7 @@ const mui = {
   MInput,
   MTextarea,
   Picker,
+  Popside,
   Popup,
   Radio,
   Tag

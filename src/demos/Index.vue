@@ -54,6 +54,10 @@
     right-desc="底部选择滚轮"
     v-link="'/components/picker'"></group-item>
     <group-item
+    title="Popside"
+    right-desc="侧边窗"
+    v-link="'/components/popside'"></group-item>
+    <group-item
     title="Popup"
     right-desc="底部浮窗"
     v-link="'/components/popup'"></group-item>
