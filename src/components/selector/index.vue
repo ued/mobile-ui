@@ -5,6 +5,7 @@
     	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
+			<div class="mui-select-placeholder" v-if="!(value)">{{ placeholder }}</div>
       <select class="mui-select" v-model="value">
         <option v-for="option in options" :value="option.value">{{ option.text }}</option>
       </select>
