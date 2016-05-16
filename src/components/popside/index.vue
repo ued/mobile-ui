@@ -64,7 +64,7 @@ export default {
   box-shadow: -3px 0px 8px 0px rgba(50, 50, 50, 0.75);
   box-sizing: border-box;
 }
-.mui-popside-transiton {
+.mui-popside-transition {
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 300ms;
