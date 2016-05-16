@@ -17,6 +17,7 @@ import Picker from './picker'
 import Popside from './popside'
 import Popup from './popup'
 import Radio from './radio'
+import Selector from './selector'
 import Tag from './tag'
 
 const mui = {
@@ -38,6 +39,7 @@ const mui = {
   Popside,
   Popup,
   Radio,
+  Selector,
   Tag
 }
 

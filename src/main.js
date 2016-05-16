@@ -17,6 +17,7 @@ import Picker from './demos/Picker'
 import Popside from './demos/Popside'
 import Popup from './demos/Popup'
 import Radio from './demos/Radio'
+import Selector from './demos/Selector'
 import Tag from './demos/Tag'
 
 FastClick.attach(document.body)
@@ -70,6 +71,9 @@ router.map({
   },
   '/components/radio': {
     component: Radio
+  },
+  '/components/selector': {
+    component: Selector
   },
   '/components/tag': {
     component: Tag

@@ -28,6 +28,10 @@
     right-desc="Radio样式"
     v-link="'/components/radio'"></group-item>
     <group-item
+    title="Selector"
+    right-desc="Select样式"
+    v-link="'/components/selector'"></group-item>
+    <group-item
     title="Tag"
     right-desc="活动标签样式"
     v-link="'/components/tag'"></group-item>
