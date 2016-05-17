@@ -19,6 +19,7 @@ import Popup from './popup'
 import Radio from './radio'
 import Selector from './selector'
 import Tag from './tag'
+import Toast from './toast'
 
 const mui = {
   Style,
@@ -40,7 +41,8 @@ const mui = {
   Popup,
   Radio,
   Selector,
-  Tag
+  Tag,
+  Toast
 }
 
 module.exports = mui

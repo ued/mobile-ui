@@ -42,6 +42,10 @@
   </group>
   <group title="弹窗类">
     <group-item
+    title="Toast"
+    right-desc="loading弹窗"
+    v-link="'/components/toast'"></group-item>
+    <group-item
     title="ActionSheet"
     right-desc="底部浮出按钮"
     v-link="'/components/action-sheet'"></group-item>

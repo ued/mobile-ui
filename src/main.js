@@ -19,6 +19,7 @@ import Popup from './demos/Popup'
 import Radio from './demos/Radio'
 import Selector from './demos/Selector'
 import Tag from './demos/Tag'
+import Toast from './demos/Toast'
 
 FastClick.attach(document.body)
 
@@ -77,6 +78,9 @@ router.map({
   },
   '/components/tag': {
     component: Tag
+  },
+  '/components/toast': {
+    component: Toast
   }
 })
 
