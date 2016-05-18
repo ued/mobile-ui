@@ -8,7 +8,7 @@
       <input class="mui-input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
     </div>
     <div class="mui-group-item-ft">
-      <i class="weui-icon weui-icon-clear" v-show="showClear && value" @click="clear"></i>
+      <i class="mui-icon mui-icon-clear" v-show="showClear && value" @click="clear"></i>
     </div>
   </div>
 </template>
