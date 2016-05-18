@@ -70,10 +70,6 @@ export default {
   box-sizing: border-box;
 }
 .mui-popside-transition {
-<<<<<<< HEAD
-  -webkit-transition-property: -webkit-transform;
-=======
->>>>>>> popside
   transition-property: transform;
   transition-duration: 300ms;
 }
