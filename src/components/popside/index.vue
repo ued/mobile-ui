@@ -24,6 +24,11 @@ export default {
   },
   ready () {
     var _this = this
+
+    // 把dom结构移在最外面，
+    // 防止一些如fix input jump，ios webkit-overflow-scrolling的bug
+    document.body.appendChild(_this.$el)
+
     this.popside = new Popside({
       container: _this.$el,
       innerHTML: '',
@@ -65,18 +70,18 @@ export default {
   box-sizing: border-box;
 }
 .mui-popside-transition {
+<<<<<<< HEAD
   -webkit-transition-property: -webkit-transform;
+=======
+>>>>>>> popside
   transition-property: transform;
-  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 .mui-popside-enter {
   background-color:red;
-  -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
 .mui-popside-leave {
-  -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
 </style>
