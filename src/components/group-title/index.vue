@@ -5,7 +5,8 @@
 </template>
 
 <style lang="less">
-@import "../group/_supports.less";
+@import "../_supports/less/variables.less";
+
 .mui-group-title {
     margin-top: .77em; // 15px - 行高
     margin-bottom: .3em; // 8px - 行高

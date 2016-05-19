@@ -11,6 +11,7 @@ import GroupItem from './group-item'
 import GroupTitle from './group-title'
 import Layout from './layout'
 import MButton from './m-button'
+import MHeader from './m-header'
 import MInput from './m-input'
 import MTextarea from './m-textarea'
 import Picker from './picker'
@@ -34,6 +35,7 @@ const mui = {
   GroupTitle,
   Layout,
   MButton,
+  MHeader,
   MInput,
   MTextarea,
   Picker,
