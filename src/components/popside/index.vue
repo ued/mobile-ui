@@ -58,7 +58,7 @@ export default {
 .mui-popside {
 }
 .mui-popside-dialog {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
