@@ -11,6 +11,7 @@ import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
 import Layout from './demos/Layout'
 import MButton from './demos/MButton'
+import MHeader from './demos/MHeader'
 import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
@@ -54,6 +55,9 @@ router.map({
   },
   '/components/m-button': {
     component: MButton
+  },
+  '/components/m-header': {
+    component: MHeader
   },
   '/components/m-input': {
     component: MInput

@@ -1,0 +1,44 @@
+@import "../_supports/scss/variables.scss";
+@import "../_supports/scss/arrow.scss";
+@import "../_supports/scss/set-one-px-line";
+
+//
+// Styles
+// ------------------------------
+.mui-header {
+  box-sizing: border-box;
+  padding-left: $muiCellGapH;
+  padding-right: $muiCellGapH;
+  height: $muiCellHeight;
+  background-color: #fff;
+  position: relative;
+  &:after {
+    @include setBottomLine($muiCellBorderColor);
+  }
+}
+.mui-header-left {
+  text-align: left;
+}
+.mui-header-middle {
+  text-align: center;
+}
+.mui-header-right {
+  text-align: right;
+}
+.mui-header-back {
+  color: $muiBrandColor;
+  line-height: $muiCellHeight;
+  &:before {
+    content: " ";
+    @include setArrow-Wap(left, 14px, $muiBrandColor, 2px);
+    top: 2px;
+    margin-left:.3em;
+  }
+}
+h1.mui-header-title {
+  line-height: $muiCellHeight;
+  font-weight: normal;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+}

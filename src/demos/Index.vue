@@ -16,6 +16,10 @@
     right-desc="按钮样式"
     v-link="'/components/m-button'"></group-item>
     <group-item
+    title="MHeader"
+    right-desc="头部样式"
+    v-link="'/components/m-header'"></group-item>
+    <group-item
     title="MInput"
     right-desc="Input样式"
     v-link="'/components/m-input'"></group-item>
