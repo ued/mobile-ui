@@ -36,6 +36,10 @@
     right-desc="Select样式"
     v-link="'/components/selector'"></group-item>
     <group-item
+    title="Switch"
+    right-desc="Switch样式"
+    v-link="'/components/switch'"></group-item>
+    <group-item
     title="Tag"
     right-desc="活动标签样式"
     v-link="'/components/tag'"></group-item>

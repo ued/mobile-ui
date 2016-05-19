@@ -1,0 +1,58 @@
+@import "../_supports/less/variables.less";
+
+//
+// Styles
+// -----------------------------
+@muiSwitchHeight: 32px;
+.mui-group-item-switch {
+    padding-top: (@muiCellHeight - @muiSwitchHeight) / 2;
+    padding-bottom: (@muiCellHeight - @muiSwitchHeight) / 2;
+    .mui-group-item-ft {
+      font-size: 0;
+    }
+}
+.mui-switch {
+    appearance: none;
+    position: relative;
+    width: 52px;
+    height: @muiSwitchHeight;
+    border: 1px solid #DFDFDF;
+    outline: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: #DFDFDF;
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: @muiSwitchHeight - 2;
+        border-radius: 15px;
+        background-color: #FDFDFD;
+        transition:transform .3s;
+    }
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: @muiSwitchHeight - 2;
+        height: @muiSwitchHeight - 2;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        transition:transform .3s;
+    }
+
+    &:checked {
+        border-color: #0092D8;
+        background-color: #0092D8;
+        &:before {
+            transform: scale(0);
+        }
+        &:after {
+            transform: translateX(20px);
+        }
+    }
+}

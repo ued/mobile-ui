@@ -19,6 +19,7 @@ import Popside from './popside'
 import Popup from './popup'
 import Radio from './radio'
 import Selector from './selector'
+import Switch from './switch'
 import Tag from './tag'
 import Toast from './toast'
 
@@ -43,6 +44,7 @@ const mui = {
   Popup,
   Radio,
   Selector,
+  Switch,
   Tag,
   Toast
 }

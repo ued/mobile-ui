@@ -19,6 +19,7 @@ import Popside from './demos/Popside'
 import Popup from './demos/Popup'
 import Radio from './demos/Radio'
 import Selector from './demos/Selector'
+import Switch from './demos/Switch'
 import Tag from './demos/Tag'
 import Toast from './demos/Toast'
 
@@ -79,6 +80,9 @@ router.map({
   },
   '/components/selector': {
     component: Selector
+  },
+  '/components/switch': {
+    component: Switch
   },
   '/components/tag': {
     component: Tag

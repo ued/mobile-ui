@@ -1,7 +1,7 @@
 <template>
 	<div class="mui-group-item">
     <div class="mui-group-item-hd">
-    	<label class="mui-label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
+    	<label class="mui-label" :style="{width: labelWidth || defaultLabelWidth + 'em'}" v-if="title">{{title}}</label>
     	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
@@ -32,6 +32,13 @@ export default {
       type: String,
       default: ''
     },
+    labelWidth: {
+      type: String,
+      default: ''
+    },
+    inlineDesc: {
+      type: String
+    },
     placeholder: {
       type: String
     },
@@ -41,12 +48,6 @@ export default {
       twoWay: true
     },
     keyboard: {
-      type: String
-    },
-    inlineDesc: {
-      type: String
-    },
-    isType: {
       type: String
     },
     min: Number,
@@ -66,7 +67,7 @@ export default {
         return '[0-9]*'
       }
     },
-    labelWidth: function () {
+    defaultLabelWidth: function () {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
     }
   },

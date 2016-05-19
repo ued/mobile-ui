@@ -1,5 +1,5 @@
 <template>
-<div class="mui-group-item">
+<div class="mui-group-item" :class="{'no-access': !access}">
   <div class="mui-group-item-bd mui-group-item-primary">
     <p>{{title}}</p>
     <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
@@ -24,6 +24,10 @@ export default {
     inlineDesc: String,
     rightDesc: String,
     withArrow: {
+      type: Boolean,
+      default: true
+    },
+    access: {
       type: Boolean,
       default: true
     }
