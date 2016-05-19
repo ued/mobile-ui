@@ -19,6 +19,11 @@
 
 <script>
 export default {
+  ready () {
+    // 把dom结构移在最外面，
+    // 防止被挡住
+    document.body.appendChild(this.$el)
+  },
   props: {
     show: {
       type: Boolean,
