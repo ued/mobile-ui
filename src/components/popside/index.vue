@@ -50,6 +50,9 @@ export default {
         this.popside.hide()
       }
     }
+  },
+  beforeDestroy () {
+    this.popside.destroy()
   }
 }
 </script>

@@ -41,6 +41,9 @@ export default {
       type: Array,
       default: []
     }
+  },
+  beforeDestroy () {
+    this.$el && this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
   }
 }
 </script>

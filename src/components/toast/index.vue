@@ -51,6 +51,9 @@ export default {
       type: String,
       default: '数据加载中'
     }
+  },
+  beforeDestroy () {
+    this.$el && this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
   }
 }
 </script>

@@ -48,4 +48,8 @@ PickerDialog.prototype.html = function (html) {
   return this
 }
 
+PickerDialog.prototype.destroy = function () {
+  this.container && this.container.parentNode && this.container.parentNode.removeChild(this.container)
+}
+
 module.exports = PickerDialog
