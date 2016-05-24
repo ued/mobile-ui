@@ -5,7 +5,7 @@
     	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
-			<div class="mui-select-placeholder" v-if="!(value)">{{ placeholder }}</div>
+			<div class="mui-select-placeholder" v-if="!(value) && value !== 0">{{ placeholder }}</div>
       <select class="mui-select" v-model="value">
         <option v-for="option in options" :value="option.value">{{ option.text }}</option>
       </select>
@@ -19,9 +19,6 @@ import InlineDesc from '../inline-desc/'
 
 export default {
   ready () {
-    if (!this.title && !this.placeholder) {
-      console.warn('no title and no placeholder?')
-    }
   },
   mixins: [Base],
   components: {
@@ -39,7 +36,7 @@ export default {
       type: String
     },
     value: {
-      type: String,
+      type: [String, Number],
       default: '',
       twoWay: true
     },
@@ -49,11 +46,6 @@ export default {
     }
   },
   computed: {
-    pattern: function () {
-      if (this.keyboard === 'number') {
-        return '[0-9]*'
-      }
-    },
     labelWidth: function () {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
     }
@@ -67,14 +59,10 @@ export default {
       this.setTouched()
     }
   },
-  data: function () {
-    let data = {
-      firstError: '',
-      forceShowError: false,
-      hasLengthEqual: false,
+  data () {
+    return {
       focus: false
     }
-    return data
   },
   watch: {
     focus: function (newVal) {

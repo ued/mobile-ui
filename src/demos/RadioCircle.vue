@@ -27,12 +27,12 @@ export default {
       radio1: {
         options: [{
           text: '选项1',
-          value: '001'
+          value: 1
         }, {
           text: '选项2',
-          value: '002'
+          value: 2
         }],
-        value: '002'
+        value: 1
       },
       radio2: {
         options: [{

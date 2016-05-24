@@ -38,11 +38,11 @@ export default {
       default: ''
     },
     optionValue: {
-      type: String,
+      type: [String, Number],
       default: ''
     },
     value: {
-      type: String,
+      type: [String, Number],
       default: '',
       twoWay: true
     }
