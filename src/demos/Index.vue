@@ -32,6 +32,10 @@
     right-desc="Radio样式"
     v-link="'/components/radio'"></group-item>
     <group-item
+    title="RadioCircle"
+    right-desc="另一种Radio样式"
+    v-link="'/components/radio-circle'"></group-item>
+    <group-item
     title="Selector"
     right-desc="Select样式"
     v-link="'/components/selector'"></group-item>

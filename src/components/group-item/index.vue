@@ -33,7 +33,6 @@ export default {
     }
   },
   created () {
-    this.$dispatch('group.class.add', 'mui-group-item-access') // 点击的样式
   }
 }
 </script>

@@ -18,6 +18,7 @@ import Picker from './picker'
 import Popside from './popside'
 import Popup from './popup'
 import Radio from './radio'
+import RadioOptionCircle from './radio-option-circle'
 import Selector from './selector'
 import Switch from './switch'
 import Tag from './tag'
@@ -43,6 +44,7 @@ const mui = {
   Popside,
   Popup,
   Radio,
+  RadioOptionCircle,
   Selector,
   Switch,
   Tag,

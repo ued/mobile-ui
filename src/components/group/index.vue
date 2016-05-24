@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mui-group-title" v-if="title" :style="{color:titleColor}">{{title}}</div>
-    <div class="mui-group" :class="{'no-group-title':!title}">
+    <div class="mui-group" :class="{'no-group-title':!title, 'mui-group-item-access':access}">
       <slot></slot>
     </div>
   </div>
@@ -16,7 +16,11 @@ export default {
   },
   props: {
     title: String,
-    titleColor: String
+    titleColor: String,
+    access: {
+      type: Boolean,
+      default: true
+    }
   },
   events: {
     'group.class.add': function (value) {

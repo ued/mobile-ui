@@ -1,8 +1,8 @@
 <template>
-	<div class="mui-group-item">
+  <div class="mui-group-item">
     <div class="mui-group-item-hd">
-    	<label class="mui-label" :style="{width: labelWidth || defaultLabelWidth + 'em'}" v-if="title">{{title}}</label>
-    	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+      <label class="mui-label" :style="{width: labelWidth || defaultLabelWidth + 'em'}" v-if="title">{{title}}</label>
+      <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
       <input class="mui-input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>

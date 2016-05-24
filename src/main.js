@@ -18,6 +18,7 @@ import Picker from './demos/Picker'
 import Popside from './demos/Popside'
 import Popup from './demos/Popup'
 import Radio from './demos/Radio'
+import RadioCircle from './demos/RadioCircle'
 import Selector from './demos/Selector'
 import Switch from './demos/Switch'
 import Tag from './demos/Tag'
@@ -77,6 +78,9 @@ router.map({
   },
   '/components/radio': {
     component: Radio
+  },
+  '/components/radio-circle': {
+    component: RadioCircle
   },
   '/components/selector': {
     component: Selector

@@ -1,5 +1,5 @@
 <template>
-<label class="mui-group-item mui-cell-radio mui-check-label" for="radio-{{uuid}}-{{index}}" v-for="(index, option) in options">
+<label class="mui-group-item mui-group-item-radio mui-check-label" for="radio-{{uuid}}-{{index}}" v-for="(index, option) in options">
   <div class="mui-group-item-bd mui-group-item-primary">
       <p>{{ option.text }}</p>
       <inline-desc v-if="option.inlineDesc">{{ option.inlineDesc }}</inline-desc>

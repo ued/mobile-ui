@@ -1,44 +1,27 @@
 //
 // Variables
 // ---------------------
-@muiCellGapV: 10px;
-@muiCellHeight: 44px;
-@muiCellFontSize: 17px;
-
-@muiCellLineHeight: unit((@muiCellHeight - 2 * @muiCellGapV) / @muiCellFontSize);
-
-@tickColor: #0092D8;
+@import "../_supports/less/variables.less";
 
 //
 // Radio Style
 // ---------------------
-.mui-check-label {
-    .setTapColor();
-}
-.mui-cell-radio{
-    .mui-group-item-ft {
-        // padding-left: @weuiCellInnerGapH;
+.mui-group-item-radio {
+  .mui-radio {
+    position: absolute;
+    left: -9999em;
+    opacity: 0;
+    &:checked {
+      & + .weui-icon-checked {
+        content: '';
+        display: block;
+        box-sizing: border-box;
+        width: 10px;
+        height: 18px;
+        border-bottom: 2px solid @globalBrandColor;
+        border-right: 2px solid @globalBrandColor;
+        transform: rotate(45deg) translateX(-50%);
+      }
     }
-    &:active {
-        background-color: #ECECEC;
-    }
-}
-.mui-cell-radio {
-    .mui-radio {
-        position: absolute;
-        left: -9999em;
-        opacity: 0;
-        &:checked {
-            & + .weui-icon-checked {
-              content: '';
-              display: block;
-              box-sizing: border-box;
-              width: 10px;
-              height: 18px;
-              border-bottom: 2px solid @tickColor;
-              border-right: 2px solid @tickColor;
-              transform: rotate(45deg) translateX(-50%);
-            }
-        }
-    }
+  }
 }
