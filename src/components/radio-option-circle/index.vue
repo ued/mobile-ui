@@ -1,5 +1,5 @@
 <template>
-<label class="mui-group-item mui-group-item-radio mui-check-label" for="radio-{{uuid}}">
+<label class="mui-group-item mui-group-item-radio-circle mui-check-label" for="radio-{{uuid}}">
   <div class="mui-group-item-hd">
     <input type="radio" class="mui-radio-circle" id="radio-{{uuid}}" :value="optionValue" v-model="value">
     <span class="weui-icon-radio-circle"></span>
