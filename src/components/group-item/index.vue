@@ -9,7 +9,7 @@
   <div class="mui-group-item-ft" :class="{'with-arrow': withArrow}">
     <slot name="ft">
       {{rightDesc}}
-    <slot>
+    </slot>
   </div>
 </div>
 </template>
