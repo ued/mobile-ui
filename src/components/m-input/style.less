@@ -168,10 +168,15 @@
   color: inherit;
   height: unit(@muiCellLineHeight, em);
   line-height: @muiCellLineHeight;
+  padding-right: 10px;
+  box-sizing: border-box;
 
   // hides the spin-button
   &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
       -webkit-appearance: none;
       margin: 0;
+  }
+  &::placeholder {
+    color: @muiPlaceholderColor;
   }
 }

@@ -1,8 +1,7 @@
 //
 // Variables
 // -------------------
-@globalDescColor: #B2B2B2;
-@globalWarnColor: #E64340;
+@import "../_supports/less/variables.less";
 
 //
 // Style
@@ -16,6 +15,9 @@
     font-size: 1em;
     line-height: inherit;
     outline: 0;
+    &::placeholder {
+      color: @muiPlaceholderColor;
+    }
 }
 
 .mui-textarea-counter{
