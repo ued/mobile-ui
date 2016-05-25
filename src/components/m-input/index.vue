@@ -43,9 +43,8 @@ export default {
       type: String
     },
     value: {
-      type: String,
-      default: '',
-      twoWay: true
+      type: [String, Number],
+      default: ''
     },
     keyboard: {
       type: String

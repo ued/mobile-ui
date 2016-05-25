@@ -37,8 +37,7 @@ export default {
     },
     value: {
       type: [String, Number],
-      default: '',
-      twoWay: true
+      default: ''
     },
     options: {
       type: Array,

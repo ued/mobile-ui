@@ -24,8 +24,7 @@ export default {
     },
     value: {
       type: String,
-      default: '',
-      twoWay: true
+      default: ''
     },
     placeholder: {
       type: String,

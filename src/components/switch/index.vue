@@ -27,8 +27,7 @@ export default {
       default: false
     },
     value: {
-      type: Boolean,
-      twoWay: true
+      type: Boolean
     },
     title: {
       type: String
