@@ -1,8 +1,10 @@
 <template>
-<div :class="[buttons.length < 3 ? 'mui-dialog-confirm' : 'mui-dialog-general']" v-show="show">
-    <div class="mui-mask"></div>
-    <div class="mui-dialog">
-        <div class="mui-dialog-hd"><strong class="mui-dialog-title">{{ head }}</strong></div>
+<div :class="[buttons.length < 3 ? 'mui-dialog-confirm' : 'mui-dialog-general']" v-show="show" transition="mui-dialog-mask">
+    <div class="mui-dialog-mask"></div>
+    <div class="mui-dialog" v-show="show" transition="mui-dialog">
+        <div class="mui-dialog-hd">
+          <strong class="mui-dialog-title">{{ head }}</strong>
+        </div>
         <div class="mui-dialog-bd">
           {{{ content }}}
           <slot></slot>
@@ -50,4 +52,24 @@ export default {
 
 <style lang="less">
 @import "style.less";
+.mui-dialog-mask-transition {
+  opacity: 1;
+  transition: opacity linear .2s;
+}
+.mui-dialog-mask-enter,.mui-dialog-mask-leave {
+  opacity: 0;
+}
+.mui-dialog-transition {
+  opacity: 1;
+  transition-duration: .4s;
+  transform: translate(-50%, -50%) scale(1)!important;
+  transition-property: transform, opacity!important;
+}
+.mui-dialog-enter {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.185)!important;
+}
+.mui-dialog-leave {
+  transform: translate(-50%, -50%) scale(1)!important;
+}
 </style>

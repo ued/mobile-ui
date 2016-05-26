@@ -8,17 +8,27 @@
   </group>
   <group title="基础样式">
     <group-item
-    title="Flexbox"
-    right-desc=""
-    v-link="'/components/flexbox'"></group-item>
+    title="MHeader"
+    right-desc="头部样式"
+    v-link="'/components/m-header'"></group-item>
     <group-item
     title="MButton"
     right-desc="按钮样式"
     v-link="'/components/m-button'"></group-item>
     <group-item
-    title="MHeader"
-    right-desc="头部样式"
-    v-link="'/components/m-header'"></group-item>
+    title="Tag"
+    right-desc="活动标签样式"
+    v-link="'/components/tag'"></group-item>
+    <group-item
+    title="Flexbox"
+    right-desc=""
+    v-link="'/components/flexbox'"></group-item>
+    <group-item
+    title="Layout"
+    right-desc="参见布局展示"
+    v-link="'/components/layout'"></group-item>
+  </group>
+  <group title="Form类">
     <group-item
     title="MInput"
     right-desc="Input样式"
@@ -43,14 +53,6 @@
     title="Switch"
     right-desc="Switch样式"
     v-link="'/components/switch'"></group-item>
-    <group-item
-    title="Tag"
-    right-desc="活动标签样式"
-    v-link="'/components/tag'"></group-item>
-    <group-item
-    title="Layout"
-    right-desc="参见布局展示"
-    v-link="'/components/layout'"></group-item>
   </group>
   <group title="弹窗类">
     <group-item
