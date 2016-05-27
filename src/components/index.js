@@ -21,6 +21,7 @@ import Radio from './radio'
 import RadioOptionCircle from './radio-option-circle'
 import Selector from './selector'
 import Switch from './switch'
+import Tab from './tab'
 import Tag from './tag'
 import Toast from './toast'
 
@@ -47,6 +48,7 @@ const mui = {
   RadioOptionCircle,
   Selector,
   Switch,
+  Tab,
   Tag,
   Toast
 }

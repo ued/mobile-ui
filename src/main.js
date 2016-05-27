@@ -21,6 +21,7 @@ import Radio from './demos/Radio'
 import RadioCircle from './demos/RadioCircle'
 import Selector from './demos/Selector'
 import Switch from './demos/Switch'
+import Tab from './demos/Tab'
 import Tag from './demos/Tag'
 import Toast from './demos/Toast'
 
@@ -87,6 +88,9 @@ router.map({
   },
   '/components/switch': {
     component: Switch
+  },
+  '/components/tab': {
+    component: Tab
   },
   '/components/tag': {
     component: Tag

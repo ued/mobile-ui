@@ -24,6 +24,10 @@
     right-desc=""
     v-link="'/components/flexbox'"></group-item>
     <group-item
+    title="Tab"
+    right-desc="tab选择栏"
+    v-link="'/components/tab'"></group-item>
+    <group-item
     title="Layout"
     right-desc="参见布局展示"
     v-link="'/components/layout'"></group-item>
