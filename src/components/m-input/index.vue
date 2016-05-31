@@ -74,6 +74,10 @@ export default {
     clear: function () {
       this.value = ''
       this.focus = true
+      let event = document.createEvent('HTMLEvents')
+      event.initEvent('input', true, false)
+      this.$els.input.value = ''
+      this.$els.input.dispatchEvent(event)
     },
     blur: function () {
       this.setTouched()
@@ -89,7 +93,7 @@ export default {
     return data
   },
   watch: {
-    focus: function (newVal) {
+    focus (newVal) {
       if (newVal) {
         this.$els.input.focus()
       }

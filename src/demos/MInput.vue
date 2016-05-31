@@ -1,7 +1,7 @@
 <template>
 <div>
   <group title="Default">
-    <m-input title="message" placeholder="placeholder"></m-input>
+    <m-input title="message" placeholder="placeholder" @input="handlerInput($event.target.value)"></m-input>
   </group>
   <group title="清除按钮">
     <m-input title="标题" placeholder="写点什么" value="右边有清除"></m-input>
@@ -21,6 +21,11 @@ export default {
   components: {
     MInput,
     Group
+  },
+  methods: {
+    handlerInput (...params) {
+      console.log(params)
+    }
   },
   data () {
     return {}
