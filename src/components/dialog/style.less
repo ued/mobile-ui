@@ -2,12 +2,10 @@
 // Variables
 // ---------------------
 @globalTextColor: #888;
-
 @muiDialogBackgroundColor: #FAFAFC;
 @muiDialogLineColor: #D5D5D6;
 @muiDialogLinkColor: #0092D8;
 @muiDialogLinkActiveBc: #EEEEEE;
-
 
 //
 // Mixins
@@ -15,120 +13,118 @@
 @import "../_supports/less/tap-color.less";
 @import "../_supports/less/set-one-px-line.less";
 
-
 //
 // Dialog Style
 // ---------------------
 .mui-dialog-mask {
-    position: absolute;
-    z-index: 1001;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .6);
+  position: absolute;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
 }
 
 .mui-dialog {
-    position: absolute;
-    z-index: 1013;
-    width: 85%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1013;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    background-color: @muiDialogBackgroundColor;
-    text-align: center;
-    border-radius: 3px;
-    .mui-dialog-confirm & {
-        .mui-dialog-hd {
-            padding: 1.2em 20px .5em;
-        }
-        .mui-dialog-bd {
-            text-align: left;
-        }
+  background-color: @muiDialogBackgroundColor;
+  text-align: center;
+  border-radius: 3px;
+  .mui-dialog-confirm & {
+    .mui-dialog-hd {
+      padding: 1.2em 20px 0.5em;
     }
+    .mui-dialog-bd {
+      text-align: left;
+    }
+  }
 }
 
 .mui-dialog-hd {
-    padding: 1.2em 0 .5em;
+  padding: 1.2em 0 0.5em;
 }
 
 .mui-dialog-title {
-    font-weight: 400;
-    font-size: 17px;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 .mui-dialog-bd {
-    padding: 0 20px;
-    font-size: 15px;
-    color: @globalTextColor;
-    text-align: left;
+  padding: 0 20px;
+  font-size: 15px;
+  color: @globalTextColor;
+  text-align: left;
 }
 
 .mui-dialog-ft {
-    position: relative;
-    line-height: 42px;
-    margin-top: 20px;
-    font-size: 17px;
-    display: flex;
-    a {
-        display: block;
-        flex: 1;
-        color: @muiDialogLinkColor;
-        text-decoration: none;
-        .setTapColor;
-        &:active {
-            background-color: @muiDialogLinkActiveBc;
-        }
+  position: relative;
+  line-height: 42px;
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  a {
+    display: block;
+    flex: 1;
+    color: @muiDialogLinkColor;
+    text-decoration: none;
+    .setTapColor;
+    &:active {
+      background-color: @muiDialogLinkActiveBc;
     }
-    &:after {
+  }
+  &:after {
+    content: " ";
+    .setTopLine(@muiDialogLineColor);
+  }
+  .mui-dialog-confirm & {
+    a {
+      position: relative;
+      &:after {
+        content: " ";
+        .setLeftLine(@muiDialogLineColor);
+      }
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  .mui-dialog-general & {
+    display: block;
+    a {
+      position: relative;
+      display: block;
+      &:before {
         content: " ";
         .setTopLine(@muiDialogLineColor);
-    }
-    .mui-dialog-confirm & {
-        a {
-            position: relative;
-            &:after {
-                content: " ";
-                .setLeftLine(@muiDialogLineColor);
-            }
-            &:first-child {
-                &:after {
-                    display: none;
-                }
-            }
+      }
+      &:first-child {
+        &:before {
+          display: none;
         }
+      }
     }
-    .mui-dialog-general & {
-        display: block;
-        a {
-            position: relative;
-            display: block;
-            &:before {
-                content: " ";
-                .setTopLine(@muiDialogLineColor);
-            }
-            &:first-child {
-                &:before {
-                    display: none;
-                }
-            }
-        }
-    }
+  }
 }
 
 .mui-btn-dialog {
-    &.default {
-        color: #353535;
-    }
-    &.primary {
-        color: #0BB20C;
-    }
+  &.default {
+    color: #353535;
+  }
+  &.primary {
+    color: #0BB20C;
+  }
 }
-
 @media screen and (min-width: 1024px) {
-    .mui-dialog {
-        width: 35%;
-    }
+  .mui-dialog {
+    width: 35%;
+  }
 }
