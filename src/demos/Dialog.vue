@@ -1,6 +1,6 @@
 <template>
 <div>
-  <group title="Dialog" style="height:1000px;">
+  <group title="Dialog">
     <group-item
     title="1个按钮"
     right-desc="点击出弹窗"
