@@ -5,7 +5,7 @@
       <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
-      <input class="mui-input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
+      <input class="mui-input" :type="type" :pattern="pattern" :placeholder="placeholder" v-model="value" @blur="blur" v-el:input :disabled="disabled"/>
     </div>
     <div class="mui-group-item-ft">
       <i class="mui-icon mui-icon-clear" v-show="showClear && value" @click="clear"></i>
@@ -58,6 +58,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

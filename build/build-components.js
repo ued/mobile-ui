@@ -141,7 +141,7 @@ function capitalizeFirstLetter (string) {
 }
 
 function converName (name) {
-  return ('vux-' + name).split('-').map(function (one, index) {
+  return ('mui-' + name).split('-').map(function (one, index) {
     return index === 0 ? one : capitalizeFirstLetter(one)
   }).join('')
 }

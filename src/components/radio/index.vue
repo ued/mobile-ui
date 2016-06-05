@@ -33,30 +33,8 @@ export default {
       twoWay: true
     }
   },
-  methods: {
-    clear: function () {
-      this.value = ''
-      this.focus = true
-    },
-    blur: function () {
-      this.setTouched()
-    }
-  },
   data: function () {
-    let data = {
-      firstError: '',
-      forceShowError: false,
-      hasLengthEqual: false,
-      focus: false
-    }
-    return data
-  },
-  watch: {
-    focus: function (newVal) {
-      if (newVal) {
-        this.$els.input.focus()
-      }
-    }
+    return {}
   }
 }
 </script>

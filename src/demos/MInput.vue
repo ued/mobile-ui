@@ -9,6 +9,9 @@
   <group title="数字键盘">
     <m-input title="数字" placeholder="写点什么" value="12" type="number" keyboard="number"></m-input>
   </group>
+  <group title="Disabled">
+    <m-input title="提示" placeholder="写点什么" value="不可以修改哟" :disabled="true"></m-input>
+  </group>
 </div>
 </template>
 
