@@ -110,7 +110,8 @@ if (list) {
       throw err
     }
     files.filter(function (file) {
-      return fs.statSync(path.join(p, file)).isDirectory()
+      // ignore files and folder named like _**
+      return fs.statSync(path.join(p, file)).isDirectory() && file[0] !== '_'
     }).forEach(function (file) {
       build(file)
     })

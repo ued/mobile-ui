@@ -2,6 +2,7 @@
 // Variables
 // ---------------------
 @muiBtnDefaultGap:15px;
+@muiMiniBtnDefaultGap:5px;
 @muiBtnHeight:42px;
 @muiBtnMiniHeight:2.3333333;
 @muiBtnFontSize:16px;
@@ -80,6 +81,10 @@
         font-size: @muiBtnMiniFontSize;
         padding: 0 1.3em;
         display: inline-block;
+        &+.mui-btn-mini {
+            margin-top: 0;
+            margin-left: @muiMiniBtnDefaultGap;
+        }
     }
 }
 
@@ -190,84 +195,3 @@
     }
   }
 }
-
-// //B类
-// .mui-btn-b-white {
-//     display: block;
-//     padding: 0 14px;
-//     font-size: 14px;
-//     height: 30px;
-//     line-height: 30px;
-//     box-sizing: border-box;
-//     border: 1px solid #ccc;
-//     border-radius: 2px;
-//     text-align: center;
-//     color: #333;
-// }
-// //C类
-// .mui-btn-c(@width:73px,@color:#0093d5) {
-//     display: inline-block;
-//     height: 28px;
-//     text-align: center;
-//     line-height: 28px;
-//     margin: 15px 10px 15px 0;
-//     font-size: 12px;
-//     border-radius: 3px;
-//     width: @width;
-//     border: 1px solid @color;
-//     color: @color;
-//     padding-left: 0;
-//     padding-right: 0;
-// }
-// .mui-btn-c-white {
-//     .mui-btn-c(@color:#F7F7F7);
-//     color:#454545;
-// }
-// .mui-btn-c-blue {
-//     .mui-btn-c();
-// }
-// .mui-btn-c-green {
-//     .mui-btn-c(@width:60px,@color:#17c000);
-// }
-// .mui-btn-c-orange {
-//     .mui-btn-c(@width:60px,@color:#f60);
-// }
-// //D类
-// .mui-btn-d-white {
-//     display: inline-block;
-//     font-size: 13px;
-//     height: 28px;
-//     line-height: 28px;
-//     padding: 0 10px;
-//     border: 1px solid #ccc;
-//     border-radius: 3px;
-//     -webkit-border-radius: 3px;
-//     color: #ccc;
-// }
-//
-// //F类
-// .mui-btn-f-orange {
-//     margin-left: 50px;
-//     background-color: #f60;
-//     display: block;
-//     height: 50px;
-//     line-height: 50px;
-//     font-size: 16px;
-//     text-align: center;
-//     color: #fff;
-//     border-radius: 0px;
-//     padding-left: 0;
-//     padding-right: 0;
-// }
-// .f-orange-wrap {
-//     -webkit-box-sizing: border-box;
-//     background-color: #fff;
-//     border-top: 1px solid #e3e3e3;
-//     border-bottom: 1px solid #e3e3e3;
-//     float: left;
-//     width: 50px;
-//     height: 50px;
-//     padding: 7px 10px;
-//     cursor: pointer;
-//     border-right: 1px solid #f4f4f4;
-// }
