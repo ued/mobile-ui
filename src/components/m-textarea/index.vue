@@ -36,7 +36,7 @@ export default {
       if (this.max && this.value.length > this.max) {
         this.value = newVal.slice(0, this.max)
       }
-      this.$dispatch('change', this.value)
+      // this.$dispatch('change', this.value)
     }
   },
   computed: {

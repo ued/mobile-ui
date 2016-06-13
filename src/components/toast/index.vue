@@ -6,7 +6,7 @@
     'mui-warning-toast': type === 'warning'
   }"
   v-show="show">
-    <div class="mui-mask-transparent"></div>
+    <div class="mui-mask-transparent" v-el:mask></div>
     <div class="mui-toast">
       <i class="mui-icon-toast" v-if="!(type === 'loading')"></i>
       <div class="mui-loading" v-if="(type === 'loading')">
@@ -37,6 +37,12 @@ export default {
     // 把dom结构移在最外面，
     // 防止被挡住
     document.body.appendChild(this.$el)
+    // 阻止mask上的滚动
+    this.$els.mask.addEventListener('touchmove', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
+      return false
+    }, false)
   },
   props: {
     type: {

@@ -1,6 +1,6 @@
 <template>
 <div :class="[buttons.length < 3 ? 'mui-dialog-confirm' : 'mui-dialog-general']" v-show="show" transition="mui-dialog-mask">
-    <div class="mui-dialog-mask"></div>
+    <div class="mui-dialog-mask" v-el:mask></div>
     <div class="mui-dialog" v-show="show" transition="mui-dialog">
         <div class="mui-dialog-hd">
           <strong class="mui-dialog-title">{{ head }}</strong>
@@ -25,6 +25,12 @@ export default {
     // 把dom结构移在最外面，
     // 防止被挡住
     document.body.appendChild(this.$el)
+    // 阻止mask上的滚动
+    this.$els.mask.addEventListener('touchmove', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
+      return false
+    }, false)
   },
   props: {
     show: {

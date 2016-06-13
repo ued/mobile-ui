@@ -1,11 +1,11 @@
 <template>
-	<div class="mui-group-item mui-group-item-select" :class="{'mui-select-after': title}">
+  <div class="mui-group-item mui-group-item-select" :class="{'mui-select-after': title}">
     <div class="mui-group-item-hd">
-    	<label class="mui-label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
-    	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+      <label class="mui-label" :style="{width: labelWidth || defaultLabelWidth + 'em'}" v-if="title">{{title}}</label>
+      <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
-			<div class="mui-select-placeholder" v-if="!(value) && value !== 0">{{ placeholder }}</div>
+      <div class="mui-select-placeholder" v-if="!(value) && value !== 0">{{ placeholder }}</div>
       <select class="mui-select" v-model="value">
         <option v-for="option in options" :value="option.value">{{ option.text }}</option>
       </select>
@@ -29,6 +29,10 @@ export default {
       type: String,
       default: ''
     },
+    labelWidth: {
+      type: String,
+      default: ''
+    },
     inlineDesc: {
       type: String
     },
@@ -45,29 +49,12 @@ export default {
     }
   },
   computed: {
-    labelWidth: function () {
+    defaultLabelWidth: function () {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
-    }
-  },
-  methods: {
-    clear: function () {
-      this.value = ''
-      this.focus = true
-    },
-    blur: function () {
-      this.setTouched()
     }
   },
   data () {
     return {
-      focus: false
-    }
-  },
-  watch: {
-    focus: function (newVal) {
-      if (newVal) {
-        this.$els.input.focus()
-      }
     }
   }
 }

@@ -110,7 +110,8 @@ if (list) {
       throw err
     }
     files.filter(function (file) {
-      return fs.statSync(path.join(p, file)).isDirectory()
+      // ignore files and folder named like _**
+      return fs.statSync(path.join(p, file)).isDirectory() && file[0] !== '_'
     }).forEach(function (file) {
       build(file)
     })
@@ -141,7 +142,7 @@ function capitalizeFirstLetter (string) {
 }
 
 function converName (name) {
-  return ('vux-' + name).split('-').map(function (one, index) {
+  return ('mui-' + name).split('-').map(function (one, index) {
     return index === 0 ? one : capitalizeFirstLetter(one)
   }).join('')
 }

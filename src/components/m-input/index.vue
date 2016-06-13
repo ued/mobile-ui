@@ -5,7 +5,7 @@
       <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
     <div class="mui-group-item-bd mui-group-item-primary">
-      <input class="mui-input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
+      <input class="mui-input" :type="type" :pattern="pattern" :placeholder="placeholder" v-model="value" @blur="blur" v-el:input :disabled="disabled" :maxlength="maxlength"/>
     </div>
     <div class="mui-group-item-ft">
       <i class="mui-icon mui-icon-clear" v-show="showClear && value" @click="clear"></i>
@@ -49,8 +49,7 @@ export default {
     keyboard: {
       type: String
     },
-    min: Number,
-    max: Number,
+    maxlength: Number,
     showClear: {
       type: Boolean,
       default: true
@@ -58,6 +57,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -74,6 +77,10 @@ export default {
     clear: function () {
       this.value = ''
       this.focus = true
+      let event = document.createEvent('HTMLEvents')
+      event.initEvent('input', true, false)
+      this.$els.input.value = ''
+      this.$els.input.dispatchEvent(event)
     },
     blur: function () {
       this.setTouched()
@@ -89,7 +96,7 @@ export default {
     return data
   },
   watch: {
-    focus: function (newVal) {
+    focus (newVal) {
       if (newVal) {
         this.$els.input.focus()
       }

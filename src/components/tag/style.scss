@@ -1,230 +1,85 @@
-﻿@charset "utf-8";
-// 根元素 font-size
-$pixelBase: 20.7;
-// 根元素 font-size
-// 在import function_v2 之前声明
-//$pixelBase: 16;   // 5s 320/20
-//$pixelBase: 18.75;// 6s 375/20
-//$pixelBase: 20.7;   // 6+ 414/20
+//
+// Variables
+// --------------------------
+$muiTagDefaultGap:10px;
+$muiTagHeight:20px;
+$muiTagFontSize:12px;
+$muiTagFontColor:#FFFFFF;
 
+$muiTagLineHeight:26px;
+$muiTagLineFontSize:12px;
+$muiTagLineFontColor:#333333;
+$muiTagLineBorderRadius:4px;
 
-@function parseInt($n ) {
-//  /* 去掉单位 13px -> 13 */
-  @return $n / ($n * 0 + 1);
-}
+$muiTagOrangeBg:#FF6600;
 
-@function rem($values ) {
-  $list: (); // 存储转变后的值
+$muiTagGreenBg:#1BCE8D;
 
-  @each $value in $values {
-    // 遍历传入的值
+$muiTagGrayBg:#999999;
 
-    @if $value == 0 or $value == auto {
-      // 0 和 auto 原样返回
-      $list: append($list, $value);
-    } @else {
-      $unit: unit($value); //取单位
-      $val: parseInt($value); // 取数字值
+$muiTagDangerousBg:#EF4F4F;
 
-      @if $unit == "px" {
-        //转换px值
-        $list: append($list, ($val / $pixelBase + rem));
-      }
-
-      @if $unit == "rem" {
-        // rem值不转换
-        $list: append($list, $value);
-      }
-    }
+.mui-tag {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: $muiTagHeight / $muiTagFontSize;
+  padding: 0 4px;
+  font-size: $muiTagFontSize;
+  color: $muiTagFontColor;
+  &+.mui-tag {
+      margin-left: $muiTagDefaultGap;
   }
-
-  @return $list;// 返回值列表
 }
 
 .mui-tag-orange {
-  color: #fff;
-  background-color: #ff6600;
-  padding: 2px 4px;
-  font-size: 12px;
+  background-color: $muiTagOrangeBg;
 }
 
-// 右上角的标签
-.mui-tag-tr-orange {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #fff;
-  background-color: #ff6600;
-  padding: 4px 10px;
-  font-size: 12px;
+.mui-tag-green {
+  background-color: $muiTagGreenBg;
 }
 
-// 例子的样式前面加 ex
-.ex-out-wrap {
-  position: relative;
-  height: 200px;
-  width: 50%;
-  border: 1px solid #000;
+.mui-tag-gray {
+  background-color: $muiTagGrayBg;
 }
 
-
-
-
-//标签分类
-.sort {
-  width: 100%;
-  margin-left: rem(20px);
-  margin-bottom: rem(10px);
-  float: left;
-}
-.sort_name {
-  padding-bottom: rem(5px);
-}
-//优惠卷标签
-//优惠券两侧锯齿
-.mui-tag-coupon_side-orange {
-  height: rem(22px);
-  width: rem(3px);
-  padding: rem(0);
-  margin: rem(0);
-  left: rem(1px);
-  display: inline-block;
-  background-size: rem(130px) rem(240px);
-}
-//优惠券标签
-.mui-tag-coupon-orange {
-  color: #fff;
-  background-color: #ff784c;
-  font-size: rem(11px);
-  height: rem(22px);
-  line-height: rem(22px);
-  padding: rem(0) rem(8px);
-  float: left;
-}
-//物品颜色标签
-//未选中时物品标签颜色
-%mui-tag-a-base {
-  box-sizing: border-box;
-  height: rem(30px);
-  border: rem(1px) solid #ddd;
-  border-radius: rem(3px);
-  -webkit-border-radius: rem(3px);
-  line-height: rem(30px);
-  text-align: center;
-  font-size: rem(12px);
-  min-width: rem(1px);
-  overflow: hidden;
-  padding: rem(0) rem(15px);
-  background: #fff;
-  margin: rem(0) rem(10px) rem(10px) rem(0);
-  word-break: break-all;
-  color: #333;
-  cursor: pointer;
-  background-clip: padding-box;
-  float: left;
-}
-.mui-tag-a-white {
-  @extend %mui-tag-a-base;
-}
-//选中时物品标签颜色
-.mui-tag-a-orange {
-  @extend %mui-tag-a-base;
-  background-color: #f60;
-  border: rem(1px) solid #f60;
-  color: #fff;
-  border-radius: rem(3px);
-  -webkit-border-radius: rem(3px);
-  overflow: hidden;
-}
-//商品评价标签
-.mui-tag-b-green {
-  display: inline-block;
-  font-size: rem(12px);
-  color: #333;
-  border-radius: rem(4px);
-  -webkit-border-radius: rem(4px);
-  background: #ebfcf1;
-  border: rem(1px) solid #23d75f;
-  height: rem(24px);
-  line-height: rem(24px);
-  vertical-align: middle;
-  padding: rem(0) rem(8px);
-  margin: rem(0px) rem(10px) rem(0) rem(10);
-}
-//商品分类
-//商品分类基础样式
-%mui-tag-c-white {
-  width: rem(70px);
-  text-align: center;
-  color: #fff;
-  font-size: rem(12px);
-  height: rem(25px);
-  line-height: rem(25px);
-  padding: rem(0) rem(10px);
-}
-//商品分类绿色背景
-.mui-tag-c-green {
-  @extend %mui-tag-c-white;
-  background-color: #1bce8d;
-}
-//商品分类橘红色背景
-.mui-tag-c-orange {
-  @extend %mui-tag-c-white;
-  background-color: #ff6600;
-}
-
-//热门单品下商品分类基础样式
-%mui-tag-d-white {
-  float: left;
-  margin-top: rem(2px);
-  margin-right: rem(5px);
-  color: #fff;
-  font-size: rem(11px);
-  height: rem(15px);
-  line-height: rem(15px);
-  padding: rem(0) rem(3px);
-  text-align: center;
-}
-//热门商品下商品分类绿色背景
-.mui-tag-d-green {
-  @extend %mui-tag-d-white;
-  background-color: #1bce8d;
-}
-//热门商品下商品分类橘红色背景
-.mui-tag-d-orange {
-  @extend %mui-tag-d-white;
-  background-color: #ff6600;
-}
-//商品申请试用
-%mui-tag-e-orange {
-  float: left;
-  text-align: center;
-  color: #fff;
-  background-color: #f60;
-}
-//商品申请试用结束
-.mui-tag-e-gray {
-  @extend %mui-tag-e-orange;
-  background-color: #999;
-}
-//限时活动
-.mui-tag-f {
-  position: relative;
-  float: left;
-  color: #fff;
-  .mui-tag-f-orange {
-    float: right;
-    height: rem(30px);
-    line-height: rem(30px);
-    padding: rem(0) rem(11px);
-    background-color: #ff6600;
+.mui-tag-line {
+  font-size: $muiTagLineFontSize;
+  color: $muiTagLineFontColor;
+  border-radius: $muiTagLineBorderRadius;
+  height: $muiTagLineHeight;
+  line-height: $muiTagLineHeight / $muiTagLineFontSize;
+  padding: 0 8px;
+  &:after {
+      content: " ";
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #000;
+      transform: scale(.5);
+      transform-origin: 0 0;
+      box-sizing: border-box;
+      border-radius: $muiTagLineBorderRadius*2;
   }
-  .mui-tag-f-gray {
-    float: right;
-    height: rem(30px);
-    line-height: rem(30px);
-    padding-right: rem(12px);
-    background-color: #303030;
-    opacity: 0.8;
+  &.mui-tag-orange {
+    background-color: rgba($muiTagOrangeBg, .15);
+    &:after {
+      border-color: $muiTagOrangeBg;
+    }
+  }
+  &.mui-tag-green {
+    background-color: rgba($muiTagGreenBg, .15);
+    &:after {
+      border-color: $muiTagGreenBg;
+    }
+  }
+  &.mui-tag-gray {
+    background-color: rgba($muiTagGrayBg, .15);
+    &:after {
+      border-color: $muiTagGrayBg;
+    }
   }
 }
