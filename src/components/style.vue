@@ -10,4 +10,7 @@
 a {
   text-decoration: none;
 }
+body {
+  color: #333;
+}
 </style>

@@ -13,6 +13,7 @@ import Layout from './layout'
 import MButton from './m-button'
 import MHeader from './m-header'
 import MInput from './m-input'
+import MNumber from './m-number'
 import MTextarea from './m-textarea'
 import Picker from './picker'
 import Popside from './popside'
@@ -40,6 +41,7 @@ const mui = {
   MButton,
   MHeader,
   MInput,
+  MNumber,
   MTextarea,
   Picker,
   Popside,

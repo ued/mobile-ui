@@ -1,0 +1,60 @@
+//
+// Variables
+// ---------------------
+@import "../_supports/less/variables.less";
+
+//
+// Style
+// ---------------------
+.mui-number {
+  position: relative;
+  line-height: @muiCellLineHeight*1.15;
+  overflow: hidden;
+}
+.mui-number-input {
+  float: left;
+  outline: 0;
+  appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+  border-radius: 0;
+  text-align: center;
+
+  // hides the spin-button
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &::placeholder {
+    color: @muiPlaceholderColor;
+    opacity: 1;
+  }
+  &:disabled {
+    opacity: 1;
+    color: inherit;
+  }
+}
+.mui-number-decrease, .mui-number-increase {
+  float: left;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  padding: 0 10px;
+  color: @globalBrandColor;
+}
+.mui-number-decrease {
+  border-right: none;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.mui-number-increase {
+  border-left: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.mui-number-disabled {
+  color: #ececec;
+}

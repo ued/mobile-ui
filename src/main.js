@@ -13,6 +13,7 @@ import Layout from './demos/Layout'
 import MButton from './demos/MButton'
 import MHeader from './demos/MHeader'
 import MInput from './demos/MInput'
+import MNumber from './demos/MNumber'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popside from './demos/Popside'
@@ -64,6 +65,9 @@ router.map({
   },
   '/components/m-input': {
     component: MInput
+  },
+  '/components/m-number': {
+    component: MNumber
   },
   '/components/m-textarea': {
     component: MTextarea

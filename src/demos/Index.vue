@@ -57,6 +57,10 @@
     title="Switch"
     right-desc="Switch样式"
     v-link="'/components/switch'"></group-item>
+    <group-item
+    title="MNumber"
+    right-desc="数量输入框"
+    v-link="'/components/m-number'"></group-item>
   </group>
   <group title="弹窗类">
     <group-item
