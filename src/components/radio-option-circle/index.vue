@@ -1,7 +1,13 @@
 <template>
 <label class="mui-group-item mui-group-item-radio-circle mui-check-label" for="radio-{{uuid}}">
   <div class="mui-group-item-hd">
-    <input type="radio" class="mui-radio-circle" id="radio-{{uuid}}" :value="optionValue" v-model="value">
+    <input
+    type="radio"
+    class="mui-radio-circle"
+    id="radio-{{uuid}}"
+    :value="optionValue"
+    v-model="value"
+    :disabled="disabled">
     <span class="weui-icon-radio-circle"></span>
   </div>
   <div class="mui-group-item-bd mui-group-item-primary">
@@ -45,10 +51,25 @@ export default {
       type: [String, Number],
       default: '',
       twoWay: true
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
+    }
+  },
+  methods: {
+    handlerClick () {
+      // 可以取消选中的处理
+      if (this.cancelable && this.value === this.optionValue) {
+        this.value = ''
+        console.log(11111111)
+      } else {
+        this.value = this.optionValue
+      }
     }
   }
 }
