@@ -5,7 +5,13 @@
       <inline-desc v-if="option.inlineDesc">{{ option.inlineDesc }}</inline-desc>
   </div>
   <div class="mui-group-item-ft">
-      <input type="radio" class="mui-radio" id="radio-{{uuid}}-{{index}}" :value="option.value" v-model="value">
+      <input
+      type="radio"
+      class="mui-radio"
+      id="radio-{{uuid}}-{{index}}"
+      :value="option.value"
+      v-model="value"
+      :disabled="disabled">
       <span class="weui-icon-checked"></span>
   </div>
 </label>
@@ -31,6 +37,10 @@ export default {
       type: [String, Number],
       default: '',
       twoWay: true
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data: function () {
