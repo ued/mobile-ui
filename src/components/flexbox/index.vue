@@ -12,7 +12,7 @@ export default {
     this.supported = support.flex
   },
   ready () {
-    if (this.supported) {
+    if (!this.supported) {
       this.$el.classList.remove('mui-flexbox')
       this.$el.classList.add('mui-flexbox--unsupport')
     }
