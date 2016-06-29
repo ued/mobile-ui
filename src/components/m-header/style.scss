@@ -9,22 +9,40 @@
   box-sizing: border-box;
   padding-left: $muiCellGapH;
   padding-right: $muiCellGapH;
-  height: $muiCellHeight;
   background-color: #fff;
   position: relative;
   &:after {
     @include setBottomLine($muiCellBorderColor);
   }
+  .mui-header-left {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .mui-header-middle {
+    flex-grow: 2;
+    text-align: center;
+  }
+  .mui-header-right {
+    flex-grow: 1;
+    text-align: right;
+  }
+  &.mui-flexbox--unspport {
+    height: $muiCellHeight;
+    .mui-header-left {
+      float: left;
+      width: percentage(1/(1 + 2 + 1));
+    }
+    .mui-header-middle {
+      float: left;
+      width: percentage(2/(1 + 2 + 1));
+    }
+    .mui-header-right {
+      float: left;
+      width: percentage(1/(1 + 2 + 1));
+    }
+  }
 }
-.mui-header-left {
-  text-align: left;
-}
-.mui-header-middle {
-  text-align: center;
-}
-.mui-header-right {
-  text-align: right;
-}
+
 .mui-header-back {
   color: $muiBrandColor;
   line-height: $muiCellHeight;
