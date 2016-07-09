@@ -1,7 +1,7 @@
 <template>
 <div>
   <group title="Default"></group>
-  <m-number :value.sync="example1"></m-number>
+  <m-number :value.sync="example1" @mui-change="showChange($arguments)"></m-number>
 
   <group title="Width"></group>
   <m-number :value.sync="example1" :width="100"></m-number>
@@ -16,6 +16,7 @@
 
   <group title="With group item">
     <group-item
+    class="mui-group-item-number"
     title="数字编辑器"
     :access="false"
     :with-arrow="false">
@@ -37,6 +38,9 @@ export default {
     GroupItem
   },
   methods: {
+    showChange (args) {
+      console.log(args)
+    }
   },
   data () {
     return {

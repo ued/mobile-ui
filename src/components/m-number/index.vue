@@ -5,7 +5,14 @@
     :class="['mui-number-decrease', {
       'mui-number-disabled': checkDisabledDecr
     }]">-</span>
-    <input number v-model="value" class="mui-number-input" :style="{width: width+'px'}" pattern="[0-9]*" :disabled="disabled" :placeholder="placeholder"/>
+    <input number
+    v-model="value"
+    class="mui-number-input"
+    :style="{width: width+'px'}"
+    pattern="[0-9]*"
+    :disabled="disabled"
+    :placeholder="placeholder"
+    @blur="handlerBlur"/>
     <span
     @click="increase()"
     :class="['mui-number-increase', {
@@ -43,7 +50,9 @@ export default {
     disabledIncrease: {
       type: Boolean,
       default: false
-    }
+    },
+    onIncrease: Function,
+    onDecrease: Function
   },
   computed: {
     checkDisabledDecr () {
@@ -55,10 +64,21 @@ export default {
   },
   methods: {
     decrease () {
-      if (!this.checkDisabledDecr) this.value -= this.step
+      if (!this.checkDisabledDecr) {
+        this.value -= this.step
+        this.onDecrease && this.onDecrease(this.value)
+        this.$dispatch('mui-change', this.value)
+      }
     },
     increase () {
-      if (!this.checkDisabledIncr) this.value += this.step
+      if (!this.checkDisabledIncr) {
+        this.value += this.step
+        this.onIncrease && this.onIncrease(this.value)
+        this.$dispatch('mui-change', this.value)
+      }
+    },
+    handlerBlur () {
+      this.$dispatch('blur', this.value)
     }
   },
   data () {
