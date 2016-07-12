@@ -4,11 +4,13 @@
   <tag>新春特惠</tag>
   <tag type="green">新春特惠</tag>
   <tag type="gray">新春特惠</tag>
+  <tag type="purple">新春特惠</tag>
 
   <group title="line类"></group>
   <tag line>新春特惠</tag>
   <tag type="green" line>新春特惠</tag>
   <tag type="gray" line>新春特惠</tag>
+  <tag type="purple" line>新春特惠</tag>
 
 </div>
 </template>

@@ -12,12 +12,9 @@ $muiTagLineFontColor:#333333;
 $muiTagLineBorderRadius:4px;
 
 $muiTagOrangeBg:#FF6600;
-
 $muiTagGreenBg:#1BCE8D;
-
 $muiTagGrayBg:#999999;
-
-$muiTagDangerousBg:#EF4F4F;
+$muiTagPurpleBg:#B084C7;
 
 .mui-tag {
   position: relative;
@@ -42,6 +39,10 @@ $muiTagDangerousBg:#EF4F4F;
 
 .mui-tag-gray {
   background-color: $muiTagGrayBg;
+}
+
+.mui-tag-purple {
+  background-color: $muiTagPurpleBg;
 }
 
 .mui-tag-line {
@@ -80,6 +81,12 @@ $muiTagDangerousBg:#EF4F4F;
     background-color: rgba($muiTagGrayBg, .15);
     &:after {
       border-color: $muiTagGrayBg;
+    }
+  }
+  &.mui-tag-purple {
+    background-color: rgba($muiTagPurpleBg, .15);
+    &:after {
+      border-color: $muiTagPurpleBg;
     }
   }
 }

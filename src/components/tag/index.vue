@@ -5,7 +5,8 @@
     'mui-tag-orange': type === 'orange',
     'mui-tag-white': type === 'white',
     'mui-tag-green': type === 'green',
-    'mui-tag-gray': type === 'gray'
+    'mui-tag-gray': type === 'gray',
+    'mui-tag-purple': type === 'purple'
   }]"><slot>{{ text }}</slot></span>
 </template>
 
