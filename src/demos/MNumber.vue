@@ -16,7 +16,6 @@
 
   <group title="With group item">
     <group-item
-    class="mui-group-item-number"
     title="数字编辑器"
     :access="false"
     :with-arrow="false">

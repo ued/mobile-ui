@@ -23,6 +23,14 @@
 
 <script>
 export default {
+  ready () {
+    let parentEl = this.$parent.$el
+
+    if (parentEl.className.indexOf('mui-group-item') > -1 &&
+    parentEl.className.indexOf('mui-group-item-number') === -1) {
+      parentEl.className += ' mui-group-item-number'
+    }
+  },
   props: {
     width: {
       type: Number,
