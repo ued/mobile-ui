@@ -62,6 +62,12 @@ export default {
     onIncrease: Function,
     onDecrease: Function
   },
+  watch: {
+    value (newVal, oldVal) {
+      if (newVal > this.max) this.value = this.max
+      if (newVal < this.min) this.value = this.min
+    }
+  },
   computed: {
     checkDisabledDecr () {
       return this.disabledDecrease || this.value <= this.min
