@@ -9,6 +9,7 @@
   <m-button disabled>disable submit</m-button>
   <m-button type="primary" disabled>disable primary</m-button>
   <m-button type="warn" disabled>disable Delete</m-button>
+  <m-button type="warn" mini>mini Delete</m-button>
 </div>
 </template>
 

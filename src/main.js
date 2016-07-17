@@ -13,6 +13,7 @@ import MInput from './demos/MInput'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popup from './demos/Popup'
+import Lesson2 from './demos/Lesson2'
 
 Vue.use(Router)
 
@@ -32,6 +33,12 @@ router.map({
   '/components/action-sheet': {
     component: ActionSheet
   },
+  '/components/flexbox': {
+    component: Flexbox
+  },
+  '/components/popup': {
+    component: Popup
+  },
   '/components/datetime': {
     component: Datetime
   },
@@ -50,6 +57,9 @@ router.map({
   '/components/picker': {
     component: Picker
   },
+  '/aa/l2': {
+    component: Lesson2
+  }
 
 })
 
