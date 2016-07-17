@@ -1,14 +1,14 @@
 <template>
-	<div class="mui_group_item">
-    <div class="mui_group_item_hd">
-    	<label class="mui_label" :style="{width: labelWidth + 'em'}" v-if="title">{{title}}</label>
-    	<inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+  <div class="mui-group-item">
+    <div class="mui-group-item-hd">
+      <label class="mui-label" :style="{width: labelWidth || defaultLabelWidth + 'em'}" v-if="title">{{title}}</label>
+      <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
     </div>
-    <div class="mui_group_item_bd mui_group_item_primary">
-      <input class="mui_input" :type="type" :pattern="pattern" placeholder="{{placeholder}}" v-model="value" @blur="blur" v-el:input/>
+    <div class="mui-group-item-bd mui-group-item-primary">
+      <input class="mui-input" :type="type" :pattern="pattern" :placeholder="placeholder" v-model="value" @blur="blur" v-el:input :disabled="disabled" :maxlength="maxlength"/>
     </div>
-    <div class="mui_group_item_ft">
-      <i class="weui_icon weui_icon_clear" v-show="showClear && value" @click="clear"></i>
+    <div class="mui-group-item-ft">
+      <i class="mui-icon mui-icon-clear mui-large-touch-area" v-show="showClear && value" @click="clear"></i>
     </div>
   </div>
 </template>
@@ -32,25 +32,24 @@ export default {
       type: String,
       default: ''
     },
-    placeholder: {
-      type: String
-    },
-    value: {
+    labelWidth: {
       type: String,
-      default: '',
-      twoWay: true
-    },
-    keyboard: {
-      type: String
+      default: ''
     },
     inlineDesc: {
       type: String
     },
-    isType: {
+    placeholder: {
       type: String
     },
-    min: Number,
-    max: Number,
+    value: {
+      type: [String, Number],
+      default: ''
+    },
+    keyboard: {
+      type: String
+    },
+    maxlength: Number,
     showClear: {
       type: Boolean,
       default: true
@@ -58,6 +57,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -66,7 +69,7 @@ export default {
         return '[0-9]*'
       }
     },
-    labelWidth: function () {
+    defaultLabelWidth: function () {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
     }
   },
@@ -74,6 +77,10 @@ export default {
     clear: function () {
       this.value = ''
       this.focus = true
+      let event = document.createEvent('HTMLEvents')
+      event.initEvent('input', true, false)
+      this.$els.input.value = ''
+      this.$els.input.dispatchEvent(event)
     },
     blur: function () {
       this.setTouched()
@@ -89,7 +96,7 @@ export default {
     return data
   },
   watch: {
-    focus: function (newVal) {
+    focus (newVal) {
       if (newVal) {
         this.$els.input.focus()
       }
@@ -99,6 +106,6 @@ export default {
 </script>
 
 <style lang="less">
-@import "../group-item/style.less"; // 引入group-iem样式
+@import (reference) "../group-item/style.less"; // 引入group-iem样式
 @import "./style.less";
 </style>

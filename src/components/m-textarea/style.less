@@ -1,13 +1,12 @@
 //
 // Variables
 // -------------------
-@globalDescColor: #B2B2B2;
-@globalWarnColor: #E64340;
+@import "../_supports/less/variables.less";
 
 //
 // Style
 // -------------------
-.mui_textarea {
+.mui-textarea {
     display: block;
     border: 0;
     resize: none;
@@ -16,12 +15,15 @@
     font-size: 1em;
     line-height: inherit;
     outline: 0;
+    &::placeholder {
+      color: @muiPlaceholderColor;
+    }
 }
 
-.mui_textarea_counter{
+.mui-textarea-counter{
     color: @globalDescColor;
     text-align: right;
-    .mui_cell_warn &{
+    .mui-cell-warn &{
         color: @globalWarnColor;
     }
 }

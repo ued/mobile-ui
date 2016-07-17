@@ -1,5 +1,5 @@
 <template>
-  <div class="mui_flexbox" :class="{'flex-col': orient == 'vertical', 'flex-row': orient == 'horizontal'}">
+  <div class="mui-flexbox" :class="{'flex-col': orient == 'vertical', 'flex-row': orient == 'horizontal'}">
     <slot></slot>
   </div>
 </template>
@@ -13,17 +13,8 @@ export default {
   },
   ready () {
     if (!this.supported) {
-      var list = this.$el.querySelectorAll('.mui_flexbox_item')
-      this.$el.classList.remove('mui_flexbox')
-      this.$el.classList.add('mui_flexbox--unsupport')
-      var number = list.length
-      var width = (100 / number) + '%'
-      for (var i = 0; i < number; i++) {
-        list[i].style.width = width
-        list[i].style['box-sizing'] = 'border-box'
-        list[i].style['margin-left'] = 0
-        list[i].style['float'] = 'left'
-      }
+      this.$el.classList.remove('mui-flexbox')
+      this.$el.classList.add('mui-flexbox--unsupport')
     }
   },
   props: {
@@ -40,7 +31,7 @@ export default {
 </script>
 
 <style>
-.mui_flexbox{
+.mui-flexbox{
   width: 100%;
   text-align: left;
   display: -webkit-box;
@@ -52,7 +43,7 @@ export default {
   -webkit-align-items: center;
 }
 
-.mui_flexbox .mui_flexbox_item{
+.mui-flexbox .mui-flexbox-item{
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
   -o-box-flex: 1;
@@ -61,31 +52,31 @@ export default {
   min-width: 20px;
 }
 
-.mui_flexbox_item > .mui_flexbox {
+.mui-flexbox-item > .mui-flexbox {
   width: 100%;
   height: 100%;
 }
 
-.mui_flexbox .mui_flexbox_item:first-child{
+.mui-flexbox .mui-flexbox-item:first-child{
   margin-left: 0!important;
 }
 
-.mui_flexbox.flex-col {
+.mui-flexbox.flex-col {
   box-orient: vertical;
   flex-direction: column;
 }
 
-.flex-col > .mui_flexbox_item {
+.flex-col > .mui-flexbox-item {
   width: 100%;
 }
 
-.mui_flexbox.flex-row {
+.mui-flexbox.flex-row {
   box-direction: row;
   box-orient: horizontal;
   flex-direction: row;
 }
 
-.flex-row > .mui_flexbox_item {
+.flex-row > .mui-flexbox-item {
   height: 100%;
 }
 </style>

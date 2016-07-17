@@ -1,0 +1,69 @@
+<template>
+  <div
+  :class="{
+    'mui-loading-toast': type === 'loading',
+    'mui-success-toast': type === 'success',
+    'mui-warning-toast': type === 'warning'
+  }"
+  v-show="show">
+    <div class="mui-mask-transparent" v-el:mask></div>
+    <div class="mui-toast">
+      <i class="mui-icon-toast" v-if="!(type === 'loading')"></i>
+      <div class="mui-loading" v-if="(type === 'loading')">
+        <div class="mui-loading-leaf mui-loading-leaf-0"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-1"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-2"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-3"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-4"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-5"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-6"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-7"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-8"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-9"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-10"></div>
+        <div class="mui-loading-leaf mui-loading-leaf-11"></div>
+      </div>
+      <p class="mui-toast-content" v-if="text">
+        {{text}}
+        <slot></slot>
+      </p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  ready () {
+    // 把dom结构移在最外面，
+    // 防止被挡住
+    document.body.appendChild(this.$el)
+    // 阻止mask上的滚动
+    this.$els.mask.addEventListener('touchmove', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
+      return false
+    }, false)
+  },
+  props: {
+    type: {
+      type: String,
+      default: 'loading'
+    },
+    show: {
+      type: Boolean,
+      default: false
+    },
+    text: {
+      type: String,
+      default: '数据加载中'
+    }
+  },
+  beforeDestroy () {
+    this.$el && this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
+  }
+}
+</script>
+
+<style lang="less">
+@import "./style.less";
+</style>

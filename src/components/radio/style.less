@@ -1,0 +1,27 @@
+//
+// Variables
+// ---------------------
+@import "../_supports/less/variables.less";
+
+//
+// Radio Style
+// ---------------------
+.mui-group-item-radio {
+  .mui-radio {
+    position: absolute;
+    left: -9999em;
+    opacity: 0;
+    &:checked {
+      & + .weui-icon-checked {
+        content: '';
+        display: block;
+        box-sizing: border-box;
+        width: 10px;
+        height: 18px;
+        border-bottom: 2px solid @globalBrandColor;
+        border-right: 2px solid @globalBrandColor;
+        transform: rotate(45deg) translateX(-50%);
+      }
+    }
+  }
+}

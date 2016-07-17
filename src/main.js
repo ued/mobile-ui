@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import FastClick from 'fastclick'
 import App from './App'
 
 import Index from './demos/Index'
@@ -8,12 +9,28 @@ import ActionSheet from './demos/ActionSheet'
 import Datetime from './demos/Datetime'
 import Dialog from './demos/Dialog'
 import Flexbox from './demos/Flexbox'
+import Layout from './demos/Layout'
 import MButton from './demos/MButton'
+import MHeader from './demos/MHeader'
 import MInput from './demos/MInput'
+import MNumber from './demos/MNumber'
 import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
+import Popside from './demos/Popside'
 import Popup from './demos/Popup'
+<<<<<<< HEAD
 import Lesson2 from './demos/Lesson2'
+=======
+import Radio from './demos/Radio'
+import RadioCircle from './demos/RadioCircle'
+import Selector from './demos/Selector'
+import Switch from './demos/Switch'
+import Tab from './demos/Tab'
+import Tag from './demos/Tag'
+import Toast from './demos/Toast'
+
+FastClick.attach(document.body)
+>>>>>>> ued/master
 
 Vue.use(Router)
 
@@ -45,11 +62,24 @@ router.map({
   '/components/dialog': {
     component: Dialog
   },
+
+  '/components/flexbox': {
+    component: Flexbox
+  },
+  '/components/layout': {
+    component: Layout
+  },
   '/components/m-button': {
     component: MButton
   },
+  '/components/m-header': {
+    component: MHeader
+  },
   '/components/m-input': {
     component: MInput
+  },
+  '/components/m-number': {
+    component: MNumber
   },
   '/components/m-textarea': {
     component: MTextarea
@@ -57,8 +87,32 @@ router.map({
   '/components/picker': {
     component: Picker
   },
-  '/aa/l2': {
-    component: Lesson2
+  '/components/popside': {
+    component: Popside
+  },
+  '/components/popup': {
+    component: Popup
+  },
+  '/components/radio': {
+    component: Radio
+  },
+  '/components/radio-circle': {
+    component: RadioCircle
+  },
+  '/components/selector': {
+    component: Selector
+  },
+  '/components/switch': {
+    component: Switch
+  },
+  '/components/tab': {
+    component: Tab
+  },
+  '/components/tag': {
+    component: Tag
+  },
+  '/components/toast': {
+    component: Toast
   }
 
 })

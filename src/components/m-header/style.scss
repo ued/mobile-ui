@@ -1,0 +1,62 @@
+@import "../_supports/scss/variables.scss";
+@import "../_supports/scss/arrow.scss";
+@import "../_supports/scss/set-one-px-line";
+
+//
+// Styles
+// ------------------------------
+.mui-header {
+  box-sizing: border-box;
+  padding-left: $muiCellGapH;
+  padding-right: $muiCellGapH;
+  background-color: #fff;
+  position: relative;
+  &:after {
+    @include setBottomLine($muiCellBorderColor);
+  }
+  .mui-header-left {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .mui-header-middle {
+    flex-grow: 2;
+    text-align: center;
+  }
+  .mui-header-right {
+    flex-grow: 1;
+    text-align: right;
+  }
+  &.mui-flexbox--unsupport {
+    height: $muiCellHeight;
+    .mui-header-left {
+      float: left;
+      width: percentage(1/(1 + 2 + 1));
+    }
+    .mui-header-middle {
+      float: left;
+      width: percentage(2/(1 + 2 + 1));
+    }
+    .mui-header-right {
+      float: left;
+      width: percentage(1/(1 + 2 + 1));
+    }
+  }
+}
+
+.mui-header-back {
+  color: $muiBrandColor;
+  line-height: $muiCellHeight;
+  &:before {
+    content: " ";
+    @include setArrow-Wap(left, 14px, $muiBrandColor, 2px);
+    top: 2px;
+    margin-left:.3em;
+  }
+}
+h1.mui-header-title {
+  line-height: $muiCellHeight;
+  font-weight: normal;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+}

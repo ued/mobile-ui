@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="mui_group_title" v-if="title" :style="{color:titleColor}">{{title}}</div>
-    <div class="mui_group" :class="{'no_group_title':!title}">
+    <div class="mui-group-title" v-if="title" :style="{color:titleColor}">{{title}}</div>
+    <div class="mui-group" :class="{'no-group-title':!title, 'mui-group-item-access':access}">
       <slot></slot>
     </div>
   </div>
@@ -16,11 +16,15 @@ export default {
   },
   props: {
     title: String,
-    titleColor: String
+    titleColor: String,
+    access: {
+      type: Boolean,
+      default: true
+    }
   },
   events: {
     'group.class.add': function (value) {
-      this.$el.querySelector('.mui_group').classList.add(value)
+      this.$el.querySelector('.mui-group').classList.add(value)
     }
   }
 }
@@ -28,7 +32,7 @@ export default {
 
 <style lang="less">
 @import "./style.less";
-.no_group_title {
+.no-group-title {
   margin-top:15px;
 }
 </style>

@@ -1,17 +1,17 @@
 <template>
-<div v-show="show" transition="mui_actionsheet">
-    <div class="mui_mask_transition" @click="closeActionSheet"></div>
-    <div class="mui_actionsheet">
-        <div class="mui_actionsheet_menu">
+<div v-show="show" transition="mui-actionsheet-mask">
+    <div class="mui-actionsheet-mask" @click="closeActionSheet"></div>
+    <div class="mui-actionsheet" v-show="show" transition="mui-actionsheet">
+        <div class="mui-actionsheet-menu">
             <div
             v-for="button in buttons"
-            :class="['mui_actionsheet_button'].concat(button.classes)"
+            :class="['mui-actionsheet-button'].concat(button.classes)"
             @click="button.onClick">
               {{ button.name }}
             </div>
         </div>
-        <div class="mui_actionsheet_action">
-            <div class="mui_actionsheet_button" @click="closeActionSheet">{{ cancelText || '取消' }}</div>
+        <div class="mui-actionsheet-action">
+            <div class="mui-actionsheet-button" @click="closeActionSheet">{{ cancelText || '取消' }}</div>
         </div>
     </div>
 </div>
@@ -19,6 +19,11 @@
 
 <script>
 export default {
+  ready () {
+    // 把dom结构移在最外面，
+    // 防止被挡住
+    document.body.appendChild(this.$el)
+  },
   props: {
     show: {
       type: Boolean,
@@ -38,6 +43,9 @@ export default {
     closeActionSheet () {
       this.show = false
     }
+  },
+  beforeDestroy () {
+    this.$el && this.$el.parentNode && this.$el.parentNode.removeChild(this.$el)
   }
 }
 </script>

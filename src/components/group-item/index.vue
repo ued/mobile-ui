@@ -1,11 +1,20 @@
 <template>
-<a class="mui_group_item" href="javascript:">
-  <div class="mui_group_item_bd mui_group_item_primary">
-    <p>{{title}}</p>
-    <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+<div class="mui-group-item" :class="{'no-access': !access}">
+  <div class="mui-group-item-hd">
+    <slot name="hd">
+      <p>{{title}}</p>
+      <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+    </slot>
   </div>
-  <div class="mui_group_item_ft with_arrow">{{rightDesc}}</div>
-</a>
+  <div class="mui-group-item-bd mui-group-item-primary">
+    <slot></slot>
+  </div>
+  <div class="mui-group-item-ft" :class="{'with-arrow': withArrow}">
+    <slot name="ft">
+      {{rightDesc}}
+    </slot>
+  </div>
+</div>
 </template>
 
 <script>
@@ -18,10 +27,17 @@ export default {
   props: {
     title: String,
     inlineDesc: String,
-    rightDesc: String
+    rightDesc: String,
+    withArrow: {
+      type: Boolean,
+      default: true
+    },
+    access: {
+      type: Boolean,
+      default: true
+    }
   },
   created () {
-    this.$dispatch('group.class.add', 'mui_group_item_access') // 点击的样式
   }
 }
 </script>

@@ -1,0 +1,149 @@
+.mui-product-wrap {
+    box-sizing: border-box;
+    align-items: flex-start;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #fafafa;
+    position: relative;
+    overflow-x: hidden;
+    &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        border-top: 1px dashed #e0e0e0;
+        color: #e0e0e0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+        left: 15px;
+    }
+    &.unavaliable {
+        background-color: #f4f4f4;
+        &:before {
+            border-top: 1px solid #e0e0e0;
+            color: #e0e0e0;
+            left: 0px;
+        }
+    }
+    &:nth-child(2) {
+        &:before {
+            border-top: 1px solid #e0e0e0;
+            color: #e0e0e0;
+            left: 0px;
+        }
+    }
+    .left-wrap {
+        flex-grow: 250;
+        align-self: center;
+    }
+    .middle-wrap {
+        flex-grow: 650;
+    }
+    .right-wrap {
+        flex-grow: 250;
+        text-align: right;
+        .bottom-label {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+        }
+    }
+    .product-img {
+        width: 100%;
+    }
+    .product-title {
+        font-weight: normal;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .product-detail {
+        margin-bottom: 12px;
+    }
+}
+
+//布局样式2
+.mui-layout2-wrap {
+    background-color: #fff;
+    ul{
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    list-style: none;
+    }
+    li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    height: 120px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    }
+    img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+    }
+    p {
+    margin: 0 0 15px 0;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+    }
+}
+
+//布局样式3
+.mui-layout3-wrap {
+    padding-left: 15px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.mui-layout3-wrap2 {
+    border-bottom: 1px solid #f4f4f4;
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    h3 {
+        height: 44px;
+        line-height: 44px;
+        float: right;
+        font-weight: normal;
+        overflow: hidden;
+        font-size: 12px;
+        color: #999;
+    }
+    .mui-inner2-wrap {
+        float: right;
+        margin-right: 35px;
+        font-size: 12px;
+        color: #f60;
+    }
+}
+
+.mui-inner1-wrap {
+    font-size: 14px;
+    color: #333;
+    padding-left: 12px;
+    float: left;
+    .mui-inner1 {
+        display: block;
+        max-width: 200px;
+        line-height: 44px;
+        height: 44px;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;      
+    }
+}
+
+
+

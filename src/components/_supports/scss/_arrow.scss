@@ -1,0 +1,33 @@
+// css3 arrow
+@mixin setArrowWidth-Wap($borderWidth) {
+    border-width: $borderWidth $borderWidth 0 0;
+}
+
+@mixin setArrowSize-Wap($arrowsize) {
+    height: $arrowsize;
+    width: $arrowsize;
+}
+
+@mixin setArrow-Wap($direction: right, $arrowsize: 8px, $borderColor: #C8C8CD, $borderWidth: 2px) {
+  display: inline-block;
+  border-color: $borderColor;
+  border-style: solid;
+  @include setArrowSize-Wap($arrowsize);
+  @include setArrowWidth-Wap($borderWidth);
+
+  @if $direction == top {
+    transform: translate(0, 0) rotate(-45deg);
+  } @else if $direction == right {
+    transform: rotate(45deg);
+    position: relative;
+    top: -2px;
+  } @else if $direction == down {
+    transform: rotate(135deg);
+    position: relative;
+    top: -3px;
+  } @else if $direction == left {
+    transform: rotate(-135deg);
+    position: relative;
+    top: -2px;
+  }
+}

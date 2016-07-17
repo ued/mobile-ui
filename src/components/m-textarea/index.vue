@@ -1,8 +1,8 @@
 <template>
-  <div class="mui_group_item">
-      <div class="mui_group_item_bd mui_group_item_primary">
-          <textarea class="mui_textarea" placeholder="{{placeholder}}" rows="3" v-model="value"></textarea>
-          <div class="mui_textarea_counter" v-show="showCounter && max"><span>{{count}}</span>/{{max}}</div>
+  <div class="mui-group-item">
+      <div class="mui-group-item-bd mui-group-item-primary">
+          <textarea class="mui-textarea" placeholder="{{placeholder}}" rows="3" v-model="value"></textarea>
+          <div class="mui-textarea-counter" v-show="showCounter && max"><span>{{count}}</span>/{{max}}</div>
       </div>
   </div>
 </template>
@@ -24,8 +24,7 @@ export default {
     },
     value: {
       type: String,
-      default: '',
-      twoWay: true
+      default: ''
     },
     placeholder: {
       type: String,
@@ -37,7 +36,7 @@ export default {
       if (this.max && this.value.length > this.max) {
         this.value = newVal.slice(0, this.max)
       }
-      this.$dispatch('change', this.value)
+      // this.$dispatch('change', this.value)
     }
   },
   computed: {
@@ -53,6 +52,6 @@ export default {
 </script>
 
 <style lang="less">
-@import "../group-item/style.less"; // 引入group-iem样式
+@import (reference) "../group-item/style.less"; // 引入group-iem样式
 @import "./style.less";
 </style>

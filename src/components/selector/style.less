@@ -1,0 +1,82 @@
+//
+// Variables
+// ---------------------
+@import "../_supports/less/variables.less";
+
+@import "../_supports/less/set-one-px-line.less";
+
+
+//
+// Select Styles
+// ----------------------
+.mui-group-item-select {
+    padding: 0;
+    .mui-select {
+        padding-right: 30px;
+    }
+    .mui-access-icon {
+
+    }
+    .mui-group-item-bd{
+        &:after{
+            content: " ";
+            .setArrow-Wap(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: @muiCellGapH;
+            margin-top: -3px;
+        }
+    }
+}
+
+.mui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: @muiCellHeight;
+    position: relative;
+    z-index: 1;
+}
+
+.mui-select-placeholder {
+    position: absolute;
+    width: 100%;
+    line-height: @muiCellHeight;
+    height: @muiCellHeight;
+    padding-right: 30px;
+    color: @muiPlaceholderColor;
+}
+
+.mui-select-after {
+    padding-left:@muiCellGapH;
+}
+
+.mui-select-before {
+    padding-right:@muiCellGapH;
+    .mui-select{width:auto;}
+    .mui-group-item-hd {
+        position:relative;
+        &:after {
+            .setRightLine(@muiCellBorderColor);
+        }
+        &:before{
+            content: " ";
+            .setArrow-Wap(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: @muiCellGapH;
+            margin-top: -3px;
+        }
+    }
+    .mui-group-item-bd {
+        padding-left:@muiCellGapH;
+        &:after{
+            display:none;
+        }
+    }
+}

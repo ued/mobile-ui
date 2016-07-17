@@ -1,0 +1,92 @@
+//
+// Variables
+// --------------------------
+$muiTagDefaultGap:10px;
+$muiTagHeight:20px;
+$muiTagFontSize:12px;
+$muiTagFontColor:#FFFFFF;
+
+$muiTagLineHeight:26px;
+$muiTagLineFontSize:12px;
+$muiTagLineFontColor:#333333;
+$muiTagLineBorderRadius:4px;
+
+$muiTagOrangeBg:#FF6600;
+$muiTagGreenBg:#1BCE8D;
+$muiTagGrayBg:#999999;
+$muiTagPurpleBg:#B084C7;
+
+.mui-tag {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: $muiTagHeight / $muiTagFontSize;
+  padding: 0 4px;
+  font-size: $muiTagFontSize;
+  color: $muiTagFontColor;
+  &+.mui-tag {
+      margin-left: $muiTagDefaultGap;
+  }
+}
+
+.mui-tag-orange {
+  background-color: $muiTagOrangeBg;
+}
+
+.mui-tag-green {
+  background-color: $muiTagGreenBg;
+}
+
+.mui-tag-gray {
+  background-color: $muiTagGrayBg;
+}
+
+.mui-tag-purple {
+  background-color: $muiTagPurpleBg;
+}
+
+.mui-tag-line {
+  font-size: $muiTagLineFontSize;
+  color: $muiTagLineFontColor;
+  border-radius: $muiTagLineBorderRadius;
+  height: $muiTagLineHeight;
+  line-height: $muiTagLineHeight / $muiTagLineFontSize;
+  padding: 0 8px;
+  &:after {
+      content: " ";
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #000;
+      transform: scale(.5);
+      transform-origin: 0 0;
+      box-sizing: border-box;
+      border-radius: $muiTagLineBorderRadius*2;
+  }
+  &.mui-tag-orange {
+    background-color: rgba($muiTagOrangeBg, .15);
+    &:after {
+      border-color: $muiTagOrangeBg;
+    }
+  }
+  &.mui-tag-green {
+    background-color: rgba($muiTagGreenBg, .15);
+    &:after {
+      border-color: $muiTagGreenBg;
+    }
+  }
+  &.mui-tag-gray {
+    background-color: rgba($muiTagGrayBg, .15);
+    &:after {
+      border-color: $muiTagGrayBg;
+    }
+  }
+  &.mui-tag-purple {
+    background-color: rgba($muiTagPurpleBg, .15);
+    &:after {
+      border-color: $muiTagPurpleBg;
+    }
+  }
+}
