@@ -18,9 +18,6 @@ import MTextarea from './demos/MTextarea'
 import Picker from './demos/Picker'
 import Popside from './demos/Popside'
 import Popup from './demos/Popup'
-<<<<<<< HEAD
-import Lesson2 from './demos/Lesson2'
-=======
 import Radio from './demos/Radio'
 import RadioCircle from './demos/RadioCircle'
 import Selector from './demos/Selector'
@@ -30,8 +27,6 @@ import Tag from './demos/Tag'
 import Toast from './demos/Toast'
 
 FastClick.attach(document.body)
->>>>>>> ued/master
-
 Vue.use(Router)
 
 const router = new Router({
@@ -62,10 +57,6 @@ router.map({
   '/components/dialog': {
     component: Dialog
   },
-
-  '/components/flexbox': {
-    component: Flexbox
-  },
   '/components/layout': {
     component: Layout
   },
@@ -89,9 +80,6 @@ router.map({
   },
   '/components/popside': {
     component: Popside
-  },
-  '/components/popup': {
-    component: Popup
   },
   '/components/radio': {
     component: Radio
