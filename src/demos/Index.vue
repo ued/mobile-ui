@@ -91,6 +91,10 @@
     title="Popup"
     right-desc="底部浮窗"
     v-link="'/components/popup'"></group-item>
+    <group-item
+    title="Word1"
+    right-desc="底部浮窗"
+    v-link="'/components/word'"></group-item>
   </group>
 </div>
 </template>

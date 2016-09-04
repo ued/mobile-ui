@@ -25,6 +25,7 @@ import Switch from './demos/Switch'
 import Tab from './demos/Tab'
 import Tag from './demos/Tag'
 import Toast from './demos/Toast'
+import Word from './demos/Word'
 
 FastClick.attach(document.body)
 Vue.use(Router)
@@ -101,6 +102,9 @@ router.map({
   },
   '/components/toast': {
     component: Toast
+  },
+  '/components/word': {
+    component: Word
   }
 
 })
