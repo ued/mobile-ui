@@ -1,7 +1,7 @@
 <template>
 <div style="padding: 0 15px;">
   <group title="正常类"></group>
-  <tag>新春特惠1</tag>
+  <tag>新春特惠1234567809</tag>
   <tag type="green">新春特惠</tag>
   <tag type="gray">新春特惠</tag>
   <tag type="purple">新春特惠</tag>
